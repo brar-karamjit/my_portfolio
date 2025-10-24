@@ -13,38 +13,39 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I'm a DevOps Engineer specializing in cloud infrastructure and automation.
+              With hands-on experience in enterprise environments, I focus on building
+              scalable, efficient systems and streamlining deployment processes.
               <br />
               <br />
-              I’m proficient in
+              I'm proficient in cloud platforms and tools including
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  AWS, GCP, Kubernetes, Terraform, and Jenkins{" "}
                 </b>
               </i>
-              — and I enjoy working across both cloud and on-prem stacks.
+              , with expertise in both cloud and on-premises infrastructure.
               <br />
               <br />
-              My key areas of interest include developing
+              My core competencies include
               <i>
                 <b className="purple">
                   {" "}
-                  Web Applications, Devops Solutions,{" "}
+                  Infrastructure as Code, CI/CD Pipeline Development,{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              and implementing monitoring solutions across hybrid cloud environments.
               <br />
               <br />
-              Whenever possible, I love building and Deploying projects with
-              <b className="purple"> Kubenetes </b> and modern frameworks like{" "}
+              I'm passionate about automation and currently work with
+              <b className="purple"> Kubernetes </b> and modern DevOps tools like{" "}
               <i>
-                <b className="purple">Python</b> and{" "}
-                <b className="purple">Java</b>.
+                <b className="purple">Terraform</b> and{" "}
+                <b className="purple">SaltStack</b>
               </i>
+              , while holding certifications in
+              <b className="purple"> CKA and AWS</b>.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
