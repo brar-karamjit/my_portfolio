@@ -23,7 +23,12 @@ import SQL from "../../Assets/TechIcons/SQL.svg";
 import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import AWS from "../../Assets/TechIcons/AWS.svg";
-import Kafka from "../../Assets/TechIcons/Kafka.svg";
+import terraform from "../../Assets/TechIcons/terraform.svg";
+import jenkins from "../../Assets/TechIcons/jenkins.svg";
+import ansible from "../../Assets/TechIcons/ansible.svg";
+import gcp from "../../Assets/TechIcons/gcp.svg";
+import powershell from "../../Assets/TechIcons/powershell.svg";
+import prometheus from "../../Assets/TechIcons/prometheus.svg";
 
 function Techstack() {
   return (
@@ -74,17 +79,17 @@ function Techstack() {
 
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiTerraform fontSize={"24px"} />
+        <img src={terraform} alt="Terraform" className="tech-icon-images" />
         <div className="tech-icons-text">Terraform</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiJenkins fontSize={"24px"} />
+        <img src={jenkins} alt="Jenkins" className="tech-icon-images" />
         <div className="tech-icons-text">Jenkins</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiAnsible fontSize={"24px"} />
+        <img src={ansible} alt="Ansible" className="tech-icon-images" />
         <div className="tech-icons-text">Ansible</div>
       </Col>
 
@@ -94,7 +99,7 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiPrometheus fontSize={"24px"} />
+        <img src={prometheus} alt="Prometheus" className="tech-icon-images" />
         <div className="tech-icons-text">Prometheus</div>
       </Col>
 
@@ -104,12 +109,12 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiGooglecloud fontSize={"24px"} />
+        <img src={gcp} alt="Google Cloud" className="tech-icon-images" />
         <div className="tech-icons-text">Google Cloud</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiPowershell fontSize={"24px"} />
+        <img src={powershell} alt="PowerShell" className="tech-icon-images" />
         <div className="tech-icons-text">PowerShell</div>
       </Col>
 

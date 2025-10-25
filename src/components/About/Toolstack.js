@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
+import windows from "../../Assets/TechIcons/windows.svg";
 import { 
 
   SiRedhat,
@@ -27,7 +28,7 @@ function Toolstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiWindows fontSize={"24px"} />
+        <img src={windows} alt="Windows Server" className="tech-icon-images" />
         <div className="tech-icons-text">Windows Server</div>
       </Col>
     </Row>

@@ -1,10 +1,7 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="256" cy="256" r="250" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M370.904 102.114H355.72L256.453 245.575H255.547L156.506 102.114H141.095L248.068 256.453L141.548 409.886H156.733L255.32 266.879H256.226L354.813 409.886H370.224L263.705 256.453L370.904 102.114V102.114Z" fill="url(#paint0_linear_2702_640)"/>
-<defs>
-<linearGradient id="paint0_linear_2702_640" x1="141.095" y1="102.114" x2="141.095" y2="409.886" gradientUnits="userSpaceOnUse">
-<stop stop-color="#58B0E3"/>
-<stop offset="1" stop-color="#F44E28"/>
-</linearGradient>
-</defs>
-</svg>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg xmlns="http://www.w3.org/2000/svg"
+aria-label="Apple" role="img"
+viewBox="0 0 512 512"><rect
+width="512" height="512"
+rx="15%"
+fill="#555"/><path fill="#f2f2f2" d="M410 334s-10 29-30 59c-5 9-29 43-58 43-21 0-35-15-62-15-33 0-46 15-67 15-11 1-22-5-34-16-77-73-81-181-52-225 18-29 48-47 81-48 26 0 54 17 65 17 8 0 50-20 74-18 33 3 56 15 73 38-49 24-66 117 10 150zM329 56c8 32-27 93-79 90-3-43 34-87 79-90z"/></svg>
