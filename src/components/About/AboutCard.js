@@ -8,15 +8,17 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi everyone! I’m <span className="purple">Soumyajit Behera</span>{" "}
-            from <span className="purple">Bhubaneswar, India</span>.
+            Hi! I'm <span className="purple">Karamjit Brar</span>, a{" "}
+            <span className="purple">DevOps Engineer</span> specializing in Cloud & Automation
+            from <span className="purple">Toronto, Canada</span>.
             <br />
-            I’m currently working as a{" "}
-            <span className="purple">Software Developer</span> at{" "}
-            <span className="purple">Juspay</span>.
-            <br />I hold an Integrated M.Sc. (IMSc) in{" "}
-            <span className="purple">Mathematics and Computing</span> from{" "}
-            <span className="purple">BIT Mesra</span>.
+            I'm currently working as a{" "}
+            <span className="purple">System Engineer</span> at{" "}
+            <span className="purple">Questrade</span>.
+            <br />
+            I hold a Bachelor of Science in{" "}
+            <span className="purple">Computer Science</span> from{" "}
+            <span className="purple">York University</span> with a GPA of 3.8/4.0.
             <br />
             <br />
             Outside of coding, I love engaging in activities that keep me
@@ -35,10 +37,16 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+          <p style={{ textAlign: "justify", marginTop: "15px" }}>
+            I'm certified as a <span className="purple">Kubernetes Administrator (CKA)</span>,{" "}
+            <span className="purple">AWS Solutions Architect</span>, and{" "}
+            <span className="purple">AWS Developer Associate</span>.
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+
+          <p style={{ color: "rgb(155 126 172)" }}>
+            "Automating today for a more efficient tomorrow"{" "}
+          </p>
+          <footer className="blockquote-footer">Karamjit</footer>
         </blockquote>
       </Card.Body>
     </Card>
