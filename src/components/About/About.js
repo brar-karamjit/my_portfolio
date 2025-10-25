@@ -6,6 +6,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import Certifications from "./certifications";
 
 function About() {
   return (
@@ -24,28 +25,30 @@ function About() {
               }}
             >
               <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Know Who <strong className="purple">I'M</strong>
+                Know Who I'M
               </h1>
               <Aboutcard />
             </Col>
             <Col
-              md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
+              md={3}
+              style={{ paddingTop: "120px", paddingBottom: "50px", paddingLeft: "50px" }}
               className="about-img"
             >
               <img src={laptopImg} alt="about" className="img-fluid" />
             </Col>
           </Row>
           <h1 className="project-heading">
-            Professional <strong className="purple">Skillset </strong>
+            Professional Skillset 
           </h1>
 
           <Techstack />
 
           <h1 className="project-heading">
-            <strong className="purple">Tools</strong> I use
+            Tools I use
           </h1>
           <Toolstack />
+
+          <Certifications />
 
           <Github />
         </Container>
