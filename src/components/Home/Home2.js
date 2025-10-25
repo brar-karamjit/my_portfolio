@@ -13,7 +13,7 @@ function Home2() {
               LET ME INTRODUCE MYSELF
             </h1>
             <p className="home-about-body">
-              I'm a DevOps Engineer specializing in cloud infrastructure and automation.
+              I'm a DevOps Engineer specializing in cloud and on-prem infrastructure and automation.
               With hands-on experience in enterprise environments, I focus on building
               scalable, efficient systems and streamlining deployment processes.
               <br />

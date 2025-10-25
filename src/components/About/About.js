@@ -38,13 +38,13 @@ function About() {
             </Col>
           </Row>
           <h1 className="project-heading">
-            Professional Skillset 
+            Tools and platforms 
           </h1>
 
           <Techstack />
 
           <h1 className="project-heading">
-            Tools I use
+            Operating Systems
           </h1>
           <Toolstack />
 

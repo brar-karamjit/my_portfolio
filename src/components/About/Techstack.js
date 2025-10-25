@@ -47,11 +47,6 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={SQL} alt="SQL" />
-        <div className="tech-icons-text">Postgresql</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
         <img src={ReactIcon} alt="react" />
         <div className="tech-icons-text">React.Js</div>
       </Col>
@@ -73,19 +68,10 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <FaRust fontSize={"24px"} />
-        <div className="tech-icons-text">Rust</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
         <img src={AWS} alt="Postman" className="tech-icon-images" />
         <div className="tech-icons-text">AWS</div>
       </Col>
 
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Kafka} alt="Kafka" className="tech-icon-images" />
-        <div className="tech-icons-text">Kafka</div>
-      </Col>
 
       <Col xs={4} md={2} className="tech-icons">
         <SiTerraform fontSize={"24px"} />
@@ -127,21 +113,7 @@ function Techstack() {
         <div className="tech-icons-text">PowerShell</div>
       </Col>
 
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedhat fontSize={"24px"} />
-        <div className="tech-icons-text">RHEL</div>
-      </Col>
 
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiUbuntu fontSize={"24px"} />
-        <div className="tech-icons-text">Ubuntu</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiWindows fontSize={"24px"} />
-        <div className="tech-icons-text">Windows Server</div>
-      </Col>
     </Row>
   );
 }

@@ -33,14 +33,11 @@ function Certifications() {
     <Container fluid className="certificate-section">
       <Container>
         <h1 className="project-heading">
-          Professional Certifications 
+          Certifications 
         </h1>
-        <p style={{ color: "white" }}>
-          Here are my professional certifications and achievements
-        </p>
         <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
           {certifications.map((cert, index) => (
-            <Col md={6} key={index} style={{ paddingTop: "20px" }} className="cert-avatar">
+            <Col md={3} key={index} style={{ paddingTop: "20px" }} className="cert-avatar">
               <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={2000}>
                 <Card className="cert-card-view" style={{
                   background: "transparent",
