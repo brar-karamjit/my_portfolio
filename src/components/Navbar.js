@@ -92,6 +92,16 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
+                as={Link}
+                to="/animations"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiFillStar style={{ marginBottom: "2px" }} /> Animations
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
                 href="https://soumyajitblogs.vercel.app/"
                 target="_blank"
                 rel="noreferrer"

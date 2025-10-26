@@ -5,7 +5,7 @@ import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
+import osstack from "./osstack";
 import Certifications from "./certifications";
 
 function About() {
@@ -46,7 +46,7 @@ function About() {
           <h1 className="project-heading">
             Operating Systems
           </h1>
-          <Toolstack />
+          <osstack />
 
           <Certifications />
 

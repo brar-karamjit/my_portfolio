@@ -4,12 +4,7 @@ import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
 import windows from "../../Assets/TechIcons/windows.svg";
 import redhat from "../../Assets/TechIcons/redhat.svg";
 import ubuntu from "../../Assets/TechIcons/ubuntu.svg";
-import { 
 
-  SiRedhat,
-  SiUbuntu,
-  SiWindows,
-} from "react-icons/si";
 
 function Toolstack() {
   return (
