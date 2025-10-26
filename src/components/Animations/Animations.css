@@ -48,18 +48,25 @@
 
 .animation-page-layout {
   min-height: 100vh;
+  padding-top: 60px !important;
+  padding-bottom: 40px !important;
 }
 
 .animation-detail-container {
   position: relative;
   z-index: 1;
-  padding-top: 150px !important;
-  padding-bottom: 60px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
 }
 
 @media (max-width: 767px) {
+  .animation-page-layout {
+    padding-top: 70px !important;
+    padding-bottom: 32px !important;
+  }
+
   .animation-detail-container {
-    padding-top: 110px !important;
-    padding-bottom: 40px !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
   }
 }
