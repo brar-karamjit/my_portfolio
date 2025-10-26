@@ -1,0 +1,162 @@
+.ping-animation-section {
+  padding: 40px 0;
+}
+
+.ping-intro {
+  margin-bottom: 2.5rem;
+}
+
+.ping-animation-title {
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--imp-text-color, #ffc14f);
+}
+
+.ping-animation-subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ping-card {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 5px 3px #412e0b;
+  height: 100%;
+}
+
+.ping-card h3 {
+  color: #ffc14f;
+  margin-bottom: 0.75rem;
+}
+
+.ping-card p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ping-track-wrapper {
+  position: relative;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+  max-width: 600px;
+}
+
+.ping-track-labels {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.ping-track {
+  position: relative;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 193, 79, 0.12);
+  overflow: hidden;
+}
+
+.ping-packet {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffc14f;
+  transform: translate(-50%, -50%);
+  animation: pingRoundTrip 3.2s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 193, 79, 0.9);
+}
+
+.ping-packet::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 193, 79, 0.45);
+  transform: translate(-50%, -50%);
+}
+
+.ping-packet.response {
+  background: #7ccfff;
+  box-shadow: 0 0 10px rgba(124, 207, 255, 0.9);
+  animation-delay: 1.6s;
+}
+
+@keyframes pingRoundTrip {
+  0% {
+    left: 0%;
+  }
+  45% {
+    left: 100%;
+  }
+  50% {
+    left: 100%;
+  }
+  95% {
+    left: 0%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.ping-step-list {
+  margin-top: 3.5rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: pingSteps;
+}
+
+.ping-step-list li {
+  counter-increment: pingSteps;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 193, 79, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  gap: 1rem;
+}
+
+.ping-step-list li::before {
+  content: counter(pingSteps, decimal-leading-zero);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #10121e;
+  background: #ffc14f;
+  border-radius: 12px;
+  min-width: 44px;
+  padding: 0.35rem 0.75rem;
+}
+
+.ping-step-title {
+  font-weight: 600;
+  color: #ffc14f;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 767px) {
+  .ping-track-wrapper {
+    margin-top: 2rem;
+  }
+
+  .ping-step-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ping-step-list li::before {
+    margin-bottom: 0.5rem;
+  }
+}

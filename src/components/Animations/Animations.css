@@ -1,0 +1,65 @@
+.animation-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 60px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.animation-card {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.animation-card-view {
+  box-shadow: 0 4px 5px 3px #412e0b !important;
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.35) !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border: 1px solid transparent !important;
+  min-height: 100% !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.animation-card-view:hover,
+.animation-card-view:focus,
+.animation-card-view:focus-visible {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 6px 8px 4px #412e0b !important;
+  border-color: rgba(255, 193, 79, 0.65) !important;
+}
+
+.animation-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.animation-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: rgba(255, 193, 79, 0.2);
+  color: #ffc14f;
+  font-size: 0.85rem;
+}
+
+.animation-page-layout {
+  min-height: 100vh;
+}
+
+.animation-detail-container {
+  position: relative;
+  z-index: 1;
+  padding-top: 150px !important;
+  padding-bottom: 60px !important;
+}
+
+@media (max-width: 767px) {
+  .animation-detail-container {
+    padding-top: 110px !important;
+    padding-bottom: 40px !important;
+  }
+}

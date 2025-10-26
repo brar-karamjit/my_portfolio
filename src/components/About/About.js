@@ -7,6 +7,7 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import osstack from "./osstack";
 import Certifications from "./certifications";
+import "./About.css";
 
 function About() {
   return (

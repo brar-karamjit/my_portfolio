@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import aws_sa from "../../Assets/aws-certified-solutions-architect.png";
 import aws_dev from "../../Assets/aws-developer.png";
 import cka from "../../Assets/cka-kubernetes.png";
+import "./About.css";
 
 function Certifications() {
   const certifications = [

@@ -7,6 +7,9 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Animations from "./components/Animations/Animations";
+import AnimationPageLayout from "./components/Animations/AnimationPageLayout";
+import HttpsKeyExchange from "./components/Animations/HttpsKeyExchange";
+import PingAnimation from "./components/Animations/PingAnimation";
 import {
   BrowserRouter as Router,
   Route,
@@ -40,9 +43,22 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/animations" element={<Animations />} />
           <Route
-            path="/animations"
-            element={<Animations />}
+            path="/animations/https-key-exchange"
+            element={(
+              <AnimationPageLayout>
+                <HttpsKeyExchange />
+              </AnimationPageLayout>
+            )}
+          />
+          <Route
+            path="/animations/icmp-ping"
+            element={(
+              <AnimationPageLayout>
+                <PingAnimation />
+              </AnimationPageLayout>
+            )}
           />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

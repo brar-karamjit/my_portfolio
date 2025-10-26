@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import "./About.css";
 import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
 import windows from "../../Assets/TechIcons/windows.svg";
 import redhat from "../../Assets/TechIcons/redhat.svg";
