@@ -14,7 +14,7 @@
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px #412e0b !important;
+  box-shadow: 0 0 10px 3px #412e0b !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -25,7 +25,7 @@
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px #412e0b !important;
+  box-shadow: 0 0 12px 5px #412e0b !important;
 }
 
 .blog-card {

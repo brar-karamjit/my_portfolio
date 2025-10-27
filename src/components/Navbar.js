@@ -100,18 +100,6 @@ function NavBar() {
                 <AiFillStar style={{ marginBottom: "2px" }} /> Animations
               </Nav.Link>
             </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item>
-
-            
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -12,6 +12,20 @@ html {
   );
 
   --imp-text-color: #ffc14f;
+  --body-text-color: #f5f5fa;
+  --muted-text-color: #d1d3e0;
+  --button-bg: #2d1e07;
+  --button-bg-hover: #fbd795;
+  --button-text-hover: #0b0c14;
+}
+
+body {
+  color: var(--body-text-color);
+}
+
+p,
+li {
+  color: var(--muted-text-color);
 }
 
 .purple {
@@ -47,14 +61,14 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #412e0b !important;
-  border-color: #f9d696 !important;
+  background-color: var(--button-bg) !important;
+  border-color: var(--imp-text-color) !important;
 }
 
 .btn-primary:hover {
-  color: #fff !important;
-  background-color: #10121e !important;
-  border-color: #fbd795 !important;
+  color: var(--button-text-hover) !important;
+  background-color: var(--button-bg-hover) !important;
+  border-color: var(--button-bg-hover) !important;
 }
 
 .btn:focus {
@@ -63,7 +77,7 @@ button:focus {
 }
 
 .project-heading {
-  color: white !important;
+  color: var(--body-text-color) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;

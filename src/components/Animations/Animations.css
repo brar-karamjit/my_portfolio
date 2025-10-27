@@ -12,7 +12,7 @@
 }
 
 .animation-card-view {
-  box-shadow: 0 4px 5px 3px #412e0b !important;
+  box-shadow: 0 0 10px 3px #412e0b !important;
   color: white !important;
   background-color: rgba(0, 0, 0, 0.35) !important;
   cursor: pointer !important;
@@ -27,7 +27,7 @@
 .animation-card-view:focus,
 .animation-card-view:focus-visible {
   transform: translateY(-6px) !important;
-  box-shadow: 0 6px 8px 4px #412e0b !important;
+  box-shadow: 0 0 12px 5px #412e0b !important;
   border-color: rgba(255, 193, 79, 0.65) !important;
 }
 

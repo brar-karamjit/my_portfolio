@@ -4,8 +4,9 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
+import Timeline from "./Timeline";
 import laptopImg from "../../Assets/about.png";
-import osstack from "./osstack";
+import OsStack from "./osstack";
 import Certifications from "./certifications";
 import "./About.css";
 
@@ -38,6 +39,9 @@ function About() {
               <img src={laptopImg} alt="about" className="img-fluid" />
             </Col>
           </Row>
+
+          <Timeline />
+
           <h1 className="project-heading">
             Tools and platforms 
           </h1>
@@ -47,7 +51,8 @@ function About() {
           <h1 className="project-heading">
             Operating Systems
           </h1>
-          <osstack />
+
+          <OsStack />
 
           <Certifications />
 
