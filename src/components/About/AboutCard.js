@@ -22,7 +22,7 @@ function AboutCard() {
             <span className="orange">York University</span> with a GPA of 3.8/4.0.
             <br />
             <br />
-            Outside of coding, I love engaging in activities that keep me
+            Outside of coding, I love activities that keep me
             creative and inspired:
           </p>
 
