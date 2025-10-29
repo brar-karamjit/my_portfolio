@@ -8,7 +8,10 @@ import Timeline from "./Timeline";
 import laptopImg from "../../Assets/about.png";
 import OsStack from "./osstack";
 import Certifications from "./certifications";
+
 import "./About.css";
+
+
 
 function About() {
   return (
@@ -40,6 +43,10 @@ function About() {
             </Col>
           </Row>
 
+          <h1 className="project-heading">
+            Experience Timeline 
+          </h1>
+
           <Timeline />
 
           <h1 className="project-heading">
@@ -55,6 +62,7 @@ function About() {
           <OsStack />
 
           <Certifications />
+
 
           <Github />
         </Container>

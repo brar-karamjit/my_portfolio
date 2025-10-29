@@ -11,7 +11,7 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #ffc14f;
+  --imp-text-color: #65c7d0;
   --body-text-color: #f5f5fa;
   --muted-text-color: #d1d3e0;
   --button-bg: #2d1e07;
@@ -28,8 +28,13 @@ li {
   color: var(--muted-text-color);
 }
 
-.purple {
+
+.orange {
   color: var(--imp-text-color) !important;
+}
+
+.blue {
+  color: #65c7d0 !important;
 }
 
 button:focus {

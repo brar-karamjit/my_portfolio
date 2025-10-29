@@ -21,7 +21,7 @@ function Home2() {
               <br />
               I'm proficient in cloud platforms and tools including
               <i>
-                <b className="purple">
+                <b className="blue">
                   {" "}
                   AWS, GCP, Kubernetes, Terraform, and Jenkins{" "}
                 </b>
@@ -31,7 +31,7 @@ function Home2() {
               <br />
               My core competencies include
               <i>
-                <b className="purple">
+                <b className="blue">
                   {" "}
                   Infrastructure as Code, CI/CD Pipeline Development,{" "}
                 </b>
@@ -40,13 +40,13 @@ function Home2() {
               <br />
               <br />
               I'm passionate about automation and currently work with
-              <b className="purple"> Kubernetes </b> and modern DevOps tools like{" "}
+              <b className="blue"> Kubernetes </b> and modern DevOps tools like{" "}
               <i>
-                <b className="purple">Terraform</b> and{" "}
-                <b className="purple">SaltStack</b>
+                <b className="blue">Terraform</b> and{" "}
+                <b className="blue">SaltStack</b>
               </i>
               , while holding certifications in
-              <b className="purple"> CKA and AWS</b>.
+              <b className="blue"> CKA and AWS</b>.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
