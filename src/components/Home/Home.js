@@ -98,7 +98,11 @@ function Home() {
         <OsStack />
       </Container>
 
-      <Certifications />
+      <Container className="home-stack-section home-surface">
+        <Certifications />
+      </Container>
+
+      
     </section>
   );
 }

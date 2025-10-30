@@ -2,9 +2,10 @@
   --home-bg: #050816;
   --home-bg-alt: #0c1533;
   --home-surface: rgba(13, 22, 46, 0.75);
-  --home-border: rgba(100, 255, 218, 0.25);
-  --home-accent: #64ffda;
-  --home-accent-soft: rgba(100, 255, 218, 0.12);
+  --home-border: rgba(79, 224, 195, 0.22);
+  --home-accent: #4fe0c3;
+  --home-accent-light: #86f2dc;
+  --home-accent-soft: rgba(80, 220, 192, 0.054);
   --home-text-primary: #e6f1ff;
   --home-text-muted: #94a3b8;
   --home-heading-font: "Inter", "Segoe UI", sans-serif;
@@ -53,7 +54,7 @@
   padding-top: 80px !important;
   padding-bottom: 100px !important;
   background:
-    radial-gradient(circle at 20% 20%, rgba(100, 255, 218, 0.18), transparent 55%),
+  radial-gradient(circle at 20% 20%, rgba(79, 224, 195, 0.075), transparent 55%),
     radial-gradient(circle at 80% 0%, rgba(100, 149, 237, 0.15), transparent 52%),
     linear-gradient(135deg, var(--home-bg) 0%, #091025 40%, var(--home-bg-alt) 100%);
   color: var(--home-text-primary);
@@ -64,7 +65,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 120%, rgba(100, 255, 218, 0.08), transparent 60%);
+  background: radial-gradient(circle at 50% 120%, rgba(79, 224, 195, 0.06), transparent 60%);
   opacity: 0.8;
   z-index: -1;
 }
@@ -98,10 +99,10 @@
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--home-accent);
-  background: rgba(100, 255, 218, 0.08);
-  border: 1px solid rgba(100, 255, 218, 0.2);
+  background: rgba(100, 255, 218, 0.058);
+  border: 1px solid rgba(100, 255, 218, 0.16);
   border-radius: 999px;
-  box-shadow: 0 12px 30px rgba(100, 255, 218, 0.15);
+  box-shadow: 0 12px 26px rgba(100, 255, 218, 0.11);
 }
 
 .home-title {
@@ -121,8 +122,8 @@
 }
 
 .home-name span {
-  color: var(--home-accent);
-  text-shadow: 0 10px 35px rgba(100, 255, 218, 0.45);
+  color: var(--home-accent-light);
+  text-shadow: 0 8px 26px rgba(100, 255, 218, 0.22);
 }
 
 .home-subtitle {
@@ -137,7 +138,7 @@
   width: 80px;
   height: 4px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--home-accent), rgba(255, 255, 255, 0));
+  background: linear-gradient(90deg, var(--home-accent-light), rgba(255, 255, 255, 0));
   margin-bottom: 2rem;
 }
 
@@ -147,9 +148,9 @@
   gap: 1rem;
   padding: 0.85rem 1.4rem;
   border-radius: 18px;
-  background: rgba(8, 16, 32, 0.6);
-  border: 1px solid rgba(100, 255, 218, 0.18);
-  box-shadow: 0 18px 45px rgba(5, 12, 28, 0.4);
+  background: rgba(8, 16, 32, 0.56);
+  border: 1px solid rgba(100, 255, 218, 0.12);
+  box-shadow: 0 18px 38px rgba(5, 12, 28, 0.35);
   backdrop-filter: blur(14px);
 }
 
@@ -168,10 +169,13 @@
 
 .home-hero-image-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
   border-radius: 32px;
   background: rgba(6, 14, 32, 0.6);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.085);
   box-shadow: 0 30px 70px rgba(3, 10, 30, 0.55);
   overflow: hidden;
 }
@@ -180,8 +184,8 @@
   content: "";
   position: absolute;
   inset: -30% -20% 60% -20%;
-  background: radial-gradient(circle, rgba(100, 255, 218, 0.35), transparent 65%);
-  opacity: 0.7;
+  background: radial-gradient(circle, rgba(100, 255, 218, 0.28), transparent 65%);
+  opacity: 0.62;
 }
 
 .home-hero-illustration {
@@ -191,18 +195,19 @@
   max-height: 520px;
   object-fit: contain;
   filter: drop-shadow(0 18px 45px rgba(5, 10, 30, 0.45));
+  transform: translateY(-32px);
 }
 
 .Typewriter__wrapper {
   font-size: clamp(1.35rem, 2vw, 1.8rem) !important;
-  color: var(--home-accent) !important;
+  color: var(--home-accent-light) !important;
   font-weight: 600 !important;
   letter-spacing: 0.08em !important;
 }
 
 .Typewriter__cursor {
   font-size: clamp(1.35rem, 2vw, 1.8rem) !important;
-  color: var(--home-accent) !important;
+  color: var(--home-accent-light) !important;
 }
 
 @media (max-width: 767px) {
@@ -406,23 +411,45 @@
 }
 
 .cert-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.4rem;
   padding: 2rem 1.75rem;
-  border-radius: 24px;
-  border: 1px solid rgba(100, 255, 218, 0.16);
-  background: rgba(6, 14, 32, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 218, 0.12);
+  background: rgba(6, 14, 32, 0.78);
   box-shadow: 0 25px 55px rgba(3, 10, 30, 0.45);
+  overflow: hidden;
   min-height: 320px;
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top, rgba(100, 255, 218, 0.22), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
 .cert-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(100, 255, 218, 0.42);
-  box-shadow: 0 32px 65px rgba(100, 255, 218, 0.2);
+  transform: translateY(-4px);
+  border-color: rgba(100, 255, 218, 0.24);
+  box-shadow: 0 26px 55px rgba(98, 168, 237, 0.18);
+  background: rgba(6, 14, 32, 0.82);
+}
+
+.cert-card:hover::before {
+  opacity: 0.45;
 }
 
 .cert-img {

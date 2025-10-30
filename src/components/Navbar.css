@@ -3,11 +3,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.1rem 2.75rem !important;
+  padding: 0.65rem 2.4rem !important;
   background: rgba(6, 14, 32, 0.42) !important;
   border-bottom: 1px solid rgba(100, 255, 218, 0.08) !important;
   box-shadow: 0 10px 26px rgba(3, 10, 30, 0.24) !important;
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
   transition:
     transform 0.45s ease,
     background 0.35s ease,
@@ -95,8 +95,8 @@
 
 .nav-link {
   position: relative !important;
-  padding: 0.75rem 1rem !important;
-  font-size: 1.1rem !important;
+  padding: 0.65rem 0.9rem !important;
+  font-size: 1rem !important;
   font-weight: 500 !important;
   color: var(--home-text-muted, #a6b0cc) !important;
   letter-spacing: 0.04em;
@@ -134,13 +134,13 @@
 
 @media (max-width: 1199px) {
   .navbar {
-    padding: 1rem 2.25rem !important;
+    padding: 0.7rem 2rem !important;
   }
 }
 
 @media (max-width: 991px) {
   .navbar {
-    padding: 0.9rem 1.75rem !important;
+    padding: 0.65rem 1.5rem !important;
   }
 
   .navbar-collapse {
@@ -169,7 +169,7 @@
 
 @media (max-width: 575px) {
   .navbar {
-    padding: 0.85rem 1.25rem !important;
+    padding: 0.6rem 1rem !important;
   }
 
   .navbar-brand-text {

@@ -18,7 +18,7 @@ function Certifications() {
       title: "AWS Developer Associate",
       image: awsDev,
       issuedBy: "Amazon Web Services",
-      date: "2025",
+      date: "2024",
     },
     {
       title: "CKA - Certified Kubernetes Administrator",
@@ -29,9 +29,8 @@ function Certifications() {
   ];
 
   return (
-    <section className="certificate-section home-surface">
+  
       <Container>
-        <p className="section-eyebrow">Validation</p>
         <h2 className="project-heading home-section-heading">Certifications</h2>
         <p className="section-subtitle">
           Certifications that back up my experience leading automation, platform engineering, and SRE initiatives.
@@ -61,7 +60,6 @@ function Certifications() {
           ))}
         </Row>
       </Container>
-    </section>
   );
 }
 
