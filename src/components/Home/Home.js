@@ -10,6 +10,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Home.css";
 
+
 function Home() {
   return (
     <section>
