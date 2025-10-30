@@ -38,30 +38,32 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/animations" element={<Animations />} />
-          <Route
-            path="/animations/https-key-exchange"
-            element={(
-              <AnimationPageLayout>
-                <HttpsKeyExchange />
-              </AnimationPageLayout>
-            )}
-          />
-          <Route
-            path="/animations/icmp-ping"
-            element={(
-              <AnimationPageLayout>
-                <PingAnimation />
-              </AnimationPageLayout>
-            )}
-          />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
+        <main className="app-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/animations" element={<Animations />} />
+            <Route
+              path="/animations/https-key-exchange"
+              element={(
+                <AnimationPageLayout>
+                  <HttpsKeyExchange />
+                </AnimationPageLayout>
+              )}
+            />
+            <Route
+              path="/animations/icmp-ping"
+              element={(
+                <AnimationPageLayout>
+                  <PingAnimation />
+                </AnimationPageLayout>
+              )}
+            />
+            <Route path="*" element={<Navigate to="/"/>} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

@@ -1,6 +1,8 @@
 .footer {
   background-color: #10121e;
-  bottom: 0 !important;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: auto;
   padding-top: 10px !important;
   padding-bottom: 8px !important;
 }
