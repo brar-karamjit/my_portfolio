@@ -21,7 +21,6 @@ function NavBar() {
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollYRef = useRef(0);
 
-  
   useEffect(() => {
     let ticking = false;
 
