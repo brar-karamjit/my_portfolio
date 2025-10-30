@@ -2,15 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.png";
 import Particle from "../Particle";
-import Home2 from "./Home2";
 import Type from "./Type";
-import Techstack from "../About/Techstack";
-import Github from "../About/Github";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
+import Techstack from "./Techstack";
+import OsStack from "./OsStack";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Home.css";
 
@@ -50,8 +45,6 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
-
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
           <Col md={12} className="home-about-social">
@@ -83,6 +76,16 @@ function Home() {
             </ul>
           </Col>
         </Row>
+      </Container>
+
+      <Container className="home-stack-section">
+        <h1 className="project-heading">Tools and Platforms</h1>
+        <Techstack />
+      </Container>
+
+      <Container className="home-stack-section">
+        <h1 className="project-heading">Operating Systems</h1>
+        <OsStack />
       </Container>
     </section>
   );

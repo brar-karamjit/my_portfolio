@@ -2,11 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Github from "./Github";
-import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import Timeline from "./Timeline";
 import laptopImg from "../../Assets/about.png";
-import OsStack from "./osstack";
 import Certifications from "./certifications";
 
 import "./About.css";
@@ -48,18 +46,6 @@ function About() {
           </h1>
 
           <Timeline />
-
-          <h1 className="project-heading">
-            Tools and platforms 
-          </h1>
-
-          <Techstack />
-
-          <h1 className="project-heading">
-            Operating Systems
-          </h1>
-
-          <OsStack />
 
           <Certifications />
 

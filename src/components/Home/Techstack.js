@@ -1,26 +1,15 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import "./About.css";
-import { 
-  SiTerraform, 
-  SiJenkins, 
-  SiAnsible, 
-  SiPrometheus, 
+import "./Home.css";
+import {
+  SiSaltproject,
   SiSplunk,
-  SiGooglecloud,
-  SiRedhat,
-  SiUbuntu,
-  SiWindows,
-  SiPowershell,
-  SiSaltproject
 } from "react-icons/si";
-import { FaRust } from "react-icons/fa";
 import ReactIcon from "../../Assets/TechIcons/React.svg";
 import Java from "../../Assets/TechIcons/Java.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
 import Docker from "../../Assets/TechIcons/Docker.svg";
-import SQL from "../../Assets/TechIcons/SQL.svg";
 import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import AWS from "../../Assets/TechIcons/AWS.svg";
@@ -34,15 +23,11 @@ import prometheus from "../../Assets/TechIcons/prometheus.svg";
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-  
-      
-
       <Col xs={4} md={2} className="tech-icons">
         <img src={Git} alt="git" />
         <div className="tech-icons-text">Git</div>
       </Col>
-     
-     
+
       <Col xs={4} md={2} className="tech-icons">
         <img src={Docker} alt="docker" />
         <div className="tech-icons-text">Docker</div>
@@ -56,17 +41,15 @@ function Techstack() {
         <img src={ReactIcon} alt="react" />
         <div className="tech-icons-text">React.Js</div>
       </Col>
-      
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={Python} alt="Python" />
         <div className="tech-icons-text">Python</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Java} alt="haskell" />
+        <img src={Java} alt="java" />
         <div className="tech-icons-text">Java</div>
       </Col>
-      
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={Postman} alt="Postman" />
@@ -74,10 +57,9 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={AWS} alt="Postman" className="tech-icon-images" />
+        <img src={AWS} alt="aws" className="tech-icon-images" />
         <div className="tech-icons-text">AWS</div>
       </Col>
-
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={terraform} alt="Terraform" className="tech-icon-images" />
@@ -118,8 +100,6 @@ function Techstack() {
         <img src={powershell} alt="PowerShell" className="tech-icon-images" />
         <div className="tech-icons-text">PowerShell</div>
       </Col>
-
-
     </Row>
   );
 }
