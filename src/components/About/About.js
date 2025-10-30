@@ -5,7 +5,6 @@ import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import Timeline from "./Timeline";
 import laptopImg from "../../Assets/about.png";
-import Certifications from "./certifications";
 
 import "./About.css";
 
@@ -46,9 +45,6 @@ function About() {
           </h1>
 
           <Timeline />
-
-          <Certifications />
-
 
           <Github />
         </Container>

@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import Type from "./Type";
 import Techstack from "./Techstack";
 import OsStack from "./OsStack";
+import Certifications from "./Certifications";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Home.css";
@@ -86,6 +87,10 @@ function Home() {
       <Container className="home-stack-section">
         <h1 className="project-heading">Operating Systems</h1>
         <OsStack />
+      </Container>
+
+      <Container className="home-certificate-section">
+        <Certifications />
       </Container>
     </section>
   );
