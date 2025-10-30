@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
 import Tilt from "react-parallax-tilt";
 import awsSa from "../../Assets/aws-certified-solutions-architect.png";
 import awsDev from "../../Assets/aws-developer.png";
@@ -30,50 +29,39 @@ function Certifications() {
   ];
 
   return (
-    <Container fluid className="certificate-section">
+    <section className="certificate-section home-surface">
       <Container>
-        <h1 className="project-heading">Certifications</h1>
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+        <p className="section-eyebrow">Validation</p>
+        <h2 className="project-heading home-section-heading">Certifications</h2>
+        <p className="section-subtitle">
+          Certifications that back up my experience leading automation, platform engineering, and SRE initiatives.
+        </p>
+        <Row className="g-4 justify-content-center">
           {certifications.map((cert) => (
-            <Col
-              md={3}
-              key={cert.title}
-              style={{ paddingTop: "20px" }}
-              className="cert-avatar"
-            >
+            <Col key={cert.title} xs={12} sm={6} lg={4} className="cert-avatar">
               <Tilt
-                tiltMaxAngleX={15}
-                tiltMaxAngleY={15}
+                className="cert-tilt"
+                tiltMaxAngleX={10}
+                tiltMaxAngleY={10}
+                glareEnable
+                glareMaxOpacity={0.2}
                 scale={1.02}
                 transitionSpeed={2000}
               >
-                <Card
-                  className="cert-card-view"
-                  style={{
-                    background: "transparent",
-                    border: "none",
-                    boxShadow: "none",
-                    transition: "all 0.3s ease-in-out",
-                  }}
-                >
-                  <Card.Img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="cert-img"
-                    style={{
-                      maxHeight: "250px",
-                      objectFit: "contain",
-                      padding: "10px",
-                      background: "rgba(255, 255, 255, 0)",
-                    }}
-                  />
-                </Card>
+                <div className="cert-card">
+                  <img src={cert.image} alt={cert.title} className="cert-img" />
+                  <div className="cert-card-meta">
+                    <h3 className="cert-card-title">{cert.title}</h3>
+                    <p className="cert-card-issuer">{cert.issuedBy}</p>
+                    <span className="cert-card-year">{cert.date}</span>
+                  </div>
+                </div>
               </Tilt>
             </Col>
           ))}
         </Row>
       </Container>
-    </Container>
+    </section>
   );
 }
 
