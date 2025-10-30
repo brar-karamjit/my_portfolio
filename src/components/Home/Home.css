@@ -181,3 +181,61 @@
 .icon-colour {
   color: #10121e !important;
 }
+
+.quick-highlights {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.quick-highlights-title {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-card {
+  background: rgba(10, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  color: #f5f5f5;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 193, 79, 0.45);
+}
+
+.highlight-icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.highlight-text {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .quick-highlights-title {
+    font-size: 1.9em;
+  }
+
+  .highlight-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
