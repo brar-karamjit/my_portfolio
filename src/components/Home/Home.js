@@ -36,7 +36,7 @@ function Home() {
               <div className="home-divider" />
               <div className="home-typewriter">
                 <Type />
-                <span className="home-typewriter-label">In rotation</span>
+                <span className="home-typewriter-label"></span>
               </div>
             </Col>
             <Col md={5} className="home-hero-image">

@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
+import { Link, useLocation } from "react-router-dom";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -18,28 +15,81 @@ import { CgFileDocument } from "react-icons/cg";
 import "./Navbar.css";
 
 function NavBar() {
+  const location = useLocation();
   const [expand, updateExpanded] = useState(false);
-  const [navColour, updateNavbar] = useState(false);
+  const [navColour, setNavColour] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollYRef = useRef(0);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      const currentScrollY = Math.max(window.scrollY, 0);
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isPastThreshold = currentScrollY > 16;
+          const scrollDelta = currentScrollY - lastScrollYRef.current;
+          const isScrollingDown = scrollDelta > 6;
+          const isScrollingUp = scrollDelta < -6;
+
+          setNavColour(isPastThreshold);
+
+          if (currentScrollY > 140 && isScrollingDown && !expand) {
+            setIsHidden(true);
+          } else if (isScrollingUp || currentScrollY <= 60 || expand) {
+            setIsHidden(false);
+          }
+
+          lastScrollYRef.current = currentScrollY;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [expand]);
+
+  useEffect(() => {
+    if (expand) {
+      setIsHidden(false);
     }
-  }
+  }, [expand]);
 
-  window.addEventListener("scroll", scrollHandler);
+  useEffect(() => {
+    setNavColour(false);
+    setIsHidden(false);
+    lastScrollYRef.current = window.scrollY;
+  }, [location.pathname]);
+
+  const navbarClasses = [
+    "navbar",
+    navColour ? "navbar--scrolled" : "",
+    isHidden ? "navbar--hidden" : "",
+  ]
+    .join(" ")
+    .trim();
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={navbarClasses}
     >
       <Container>
-        
+        <Navbar.Brand as={Link} to="/" className="navbar-brand">
+          <img src={logo} alt="Karamjit Brar logo" className="navbar-logo" />
+          <span className="navbar-brand-text">Karamjit Brar</span>
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
