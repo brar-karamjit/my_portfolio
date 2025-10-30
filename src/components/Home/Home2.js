@@ -55,41 +55,6 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
-        <Row className="quick-highlights">
-          <Col md={12}>
-            <h2 className="quick-highlights-title">💡 Quick Highlights</h2>
-          </Col>
-          <Col md={12}>
-            <div className="highlight-grid">
-              <div className="highlight-card">
-                <span className="highlight-icon" role="img" aria-label="rocket">
-                  🚀
-                </span>
-                <p className="highlight-text">2+ years in Cloud &amp; DevOps</p>
-              </div>
-              <div className="highlight-card">
-                <span className="highlight-icon" role="img" aria-label="cloud">
-                  ☁️
-                </span>
-                <p className="highlight-text">AWS &amp; GCP certified</p>
-              </div>
-              <div className="highlight-card">
-                <span className="highlight-icon" role="img" aria-label="toolbox">
-                  🧰
-                </span>
-                <p className="highlight-text">Automation-first mindset</p>
-              </div>
-              <div className="highlight-card">
-                <span className="highlight-icon" role="img" aria-label="graduate">
-                  🧑‍🎓
-                </span>
-                <p className="highlight-text">
-                  B.Sc. Computer Science, York University.
-                </p>
-              </div>
-            </div>
-          </Col>
-        </Row>
       </Container>
     </Container>
   );
