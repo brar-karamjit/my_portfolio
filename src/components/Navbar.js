@@ -18,10 +18,10 @@ function NavBar() {
   const location = useLocation();
   const [expand, updateExpanded] = useState(false);
   const [navColour, setNavColour] = useState(false);
-  
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollYRef = useRef(0);
 
+  
   useEffect(() => {
     let ticking = false;
 
