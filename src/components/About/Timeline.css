@@ -1,197 +1,29 @@
-/* Page-level baseline typography and spacing for the timeline view */
-body {
-  font-family: tahoma;
-  padding: 40px 0;
+/* Timeline specific animations to highlight progression */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: timeline-fade-in 0.6s ease forwards;
 }
 
-
-
-/* Overall timeline container keeps the vertical flow centered */
-.main-timeline {
-  position: relative;
-  padding: 20px 0;
-  margin-top: 100px;
-  margin-bottom: 100px;
+.timeline-item:nth-child(2) {
+  animation-delay: 0.1s;
 }
 
-/* Decorative caps at the start and end of the timeline spine */
-.main-timeline::before,
-.main-timeline::after {
-  content: "";
-  height: 10px;
-  width: 10px;
-  background-color: #65c7d0;
-  border-radius: 50%;
-  border: 1px solid white; /* thinner and white */
-  transform: translateX(-50%);
-  position: absolute;
-  left: 50%;
-  z-index: 2;
+.timeline-item:nth-child(3) {
+  animation-delay: 0.2s;
 }
 
-.main-timeline::before {
-  top: 20px;
+.timeline-item:nth-child(4) {
+  animation-delay: 0.3s;
 }
 
-.main-timeline::after {
-  bottom: 20px;
-}
-
-/* Individual event wrapper that controls spacing and stacking */
-.timeline {
-  position: relative;
-  padding: 100px 0;  /* more vertical spacing */
-  margin-top: -16px;     /* no negative overlap */
-  z-index: 1;
-}
-
-/* Curved half-pill background that frames each event */
-.timeline::before,
-.timeline::after {
-  content: "";
-  height: 100%;
-  width: 50%;
-  border-radius: 100px 0 0 100px;
-  border: 1px solid rgb(255, 255, 255); /* thin white lines */
-  border-right: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
-/* Inner border inset adds depth to the event card */
-.timeline::after {
-  height: calc(100% - 30px);
-  width: calc(50% - 10px);
-  border-color: rgb(255, 255, 255);
-  left: 10px;
-  top: 15px;
-}
-
-/* Large year marker anchored near the center spine */
-.timeline-year {
-  color: #65c7d0;
-  font-size: 30px;
-  font-weight: 600;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-}
-
-/* Icon slot reinforcing the timeline motif */
-.timeline-icon {
-  color: #65c7d0;
-  font-size: 70px;
-  position: absolute;
-  top: 50%;
-  left: 34%;
-  transform: translateY(-50%);
-}
-
-/* Text block for the event headline and description */
-.content {
-  color: #909090;
-  width: 50%;
-  padding: 20px;  /* bigger padding for spacing */
-  float: right;
-}
-
-/* Event title styling keeps headings consistent */
-.title {
-  color: #65c7d0;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 0 0 10px 0;
-}
-
-/* Paragraph copy for timelines renders with balanced readability */
-.description {
-  font-size: 16px;
-  margin: 0;
-}
-
-/* Alternate positioning for every other event to create a zig-zag layout */
-.timeline:nth-child(even)::before {
-  left: auto;
-  right: 0;
-  border-radius: 0 100px 100px 0;
-  border-left: none;
-}
-
-.timeline:nth-child(even)::after {
-  left: auto;
-  right: 10px;
-  border-radius: 0 100px 100px 0;
-  border-left: none;
-}
-
-.timeline:nth-child(even) .content {
-  float: left;
-}
-
-.timeline:nth-child(even) .timeline-year {
-  left: auto;
-  right: 10%;
-}
-
-.timeline:nth-child(even) .timeline-icon {
-  left: auto;
-  right: 32%;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 1200px) {
-  .timeline:after { border-radius: 80px 0 0 80px; }
-  .timeline:nth-child(even):after { border-radius: 0 80px 80px 0; }
-}
-
-/* Tablet layout: tighten spacing and stroke weights */
-@media screen and (max-width: 767px) {
-  .timeline { padding: 40px 0; }
-  .timeline:before { border-radius: 50px 0 0 50px; border-width: 5px; }
-  .timeline:after {
-    height: calc(100% - 20px);
-    width: calc(50% - 5px);
-    border-radius: 40px 0 0 40px;
-    border-width: 5px;
-    top: 10px;
-    left: 5px;
+@keyframes timeline-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
   }
-  .timeline:nth-child(even):before { border-radius: 0 50px 50px 0; border-width: 5px; }
-  .timeline:nth-child(even):after {
-    height: calc(100% - 20px);
-    width: calc(50% - 5px);
-    border-radius: 0 40px 40px 0;
-    border-width: 5px;
-    top: 10px;
-    right: 5px;
-  }
-  .timeline-icon { font-size: 60px; }
-  .timeline-year { font-size: 40px; }
-}
-
-/* Phone layout: stack content and shrink typographic scale */
-@media screen and (max-width: 479px) {
-  .timeline-icon {
-    font-size: 50px;
+  to {
+    opacity: 1;
     transform: translateY(0);
-    top: 25%;
-    left: 10%;
   }
-  .timeline-year {
-    font-size: 25px;
-    transform: translateY(0);
-    top: 65%;
-    left: 9%;
-  }
-  .content {
-    width: 70%;
-    padding: 20px;
-  }
-  .title { font-size: 18px; }
-  .timeline:nth-child(even) .timeline-icon { right: 10%; }
-  .timeline:nth-child(even) .timeline-year { right: 9%; }
 }
