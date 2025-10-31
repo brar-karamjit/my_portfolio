@@ -1,66 +1,62 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import { Container } from "react-bootstrap";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import ProjectCard from "./ProjectCards";
+import momentImg from "../../Assets/Projects/AI-assistant.png";
+import inventoryImg from "../../Assets/Projects/inventory.png";
+import portfolioImg from "../../Assets/Projects/portfolio.png";
+
+import "../Home/Home.css";
 import "./Projects.css";
+
+const projects = [
+  {
+    title: "MomentInMotion",
+    description:
+      "Personalized activity recommendations that blend weather insights, location signals, and generative AI to keep days meaningful and memorable.",
+    imgPath: momentImg,
+    ghLink: "https://github.com/brar-karamjit/MomentInMotion",
+    demoLink: "https://moment-in-motion.web.app/",
+    tags: ["Django", "OpenWeather API", "Gemini", "Tailwind"],
+  },
+  {
+    title: "Inventory Manager",
+    description:
+      "Role-based inventory operations with audit trails, low-stock automation, and customizable dashboards for fast-moving product teams.",
+    imgPath: inventoryImg,
+    ghLink: "https://github.com/brar-karamjit/inventory_manager",
+    demoLink: null,
+    tags: ["Django", "PostgreSQL", "Docker", "CI/CD"],
+  },
+  {
+    title: "Portfolio Platform",
+    description:
+      "The site you are exploring—crafted with React and a DevOps mindset to showcase projects, experiments, and a resilient design system.",
+    imgPath: portfolioImg,
+    ghLink: "https://github.com/brar-karamjit/my_portfolio",
+    demoLink: "https://karamjitbrar.com/",
+    tags: ["React", "Vercel", "Framer Motion", "Design Systems"],
+  },
+];
 
 function Projects() {
   return (
-    <Container fluid className="project-section">
+    <>
       <Particle />
-      <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="MomentInMotion"
-              description="MomentInMotion is a personal activity suggestion web app that recommends things to do based on a user’s location, weather, and interests. The app uses real-time weather data and generative AI to provide personalized suggestions."
-              ghLink="https://github.com/brar-karamjit/MomentInMotion"
-              //demoLink="https://moment-in-motion.web.app/"
-            />
-          </Col>
+      <section className="projects-section" id="projects">
+        <Container className="projects-hero">
+          <h1 className="projects-title">Projects</h1>
+        </Container>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Inventory Manager"
-              description="The Inventory Manager is a robust Django-based web application designed to help businesses efficiently track and manage their inventory. With an intuitive interface and powerful features, this tool is ideal for businesses of all sizes."
-              ghLink="https://github.com/brar-karamjit/inventory_manager"
-              //demoLink="https://inventory-management-system.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Portfolio Website"
-              description="The Portfolio Website is a personal project showcasing my skills, projects, and experiences. Built with React.js and Bootstrap, it features a modern design and responsive layout."
-              ghLink="https://github.com/brar-karamjit/my_portfolio"
-              demoLink="https://karamjitbrar.com/"
-            />
-          </Col>
-
-          
-
-          
-        </Row>
-      </Container>
-    </Container>
+        <Container className="projects-grid home-surface">
+          <div className="projects-grid-list">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
 

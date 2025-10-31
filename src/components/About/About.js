@@ -53,9 +53,7 @@ function About() {
           <Timeline />
         </Container>
 
-        <Container className="about-github about-surface home-surface">
-          <Github />
-        </Container>
+        
       </section>
     </>
   );
