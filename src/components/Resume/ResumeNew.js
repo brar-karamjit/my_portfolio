@@ -85,12 +85,7 @@ function ResumeNew() {
         </Container>
 
         <Container className="resume-preview home-surface">
-          <div className="resume-preview-header">
-            <p className="resume-preview-label">Interactive preview</p>
-            <p className="resume-preview-caption">
-              Scroll inside the viewer or open the résumé in a new tab for full resolution.
-            </p>
-          </div>
+          
           <div className="resume-pdf-wrapper">
             <Document
               file={pdf}
