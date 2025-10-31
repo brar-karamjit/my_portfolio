@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import Animations from "./components/Animations/Animations";
+import Blog from "./components/Animations/Animations";
 import AnimationPageLayout from "./components/Animations/AnimationPageLayout";
 import HttpsKeyExchange from "./components/Animations/HttpsKeyExchange";
 import PingAnimation from "./components/Animations/PingAnimation";
@@ -44,9 +44,9 @@ function App() {
             <Route path="/project" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/animations" element={<Animations />} />
+            <Route path="/blog" element={<Blog />} />
             <Route
-              path="/animations/https-key-exchange"
+              path="/blog/https-key-exchange"
               element={(
                 <AnimationPageLayout>
                   <HttpsKeyExchange />
@@ -54,7 +54,7 @@ function App() {
               )}
             />
             <Route
-              path="/animations/icmp-ping"
+              path="/blog/icmp-ping"
               element={(
                 <AnimationPageLayout>
                   <PingAnimation />

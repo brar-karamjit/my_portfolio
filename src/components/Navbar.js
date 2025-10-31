@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import {
-  AiFillStar,
+  AiOutlineBook,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
@@ -144,10 +144,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/animations"
+                to="/blog"
                 onClick={() => updateExpanded(false)}
               >
-                <AiFillStar style={{ marginBottom: "2px" }} /> Animations
+                <AiOutlineBook style={{ marginBottom: "2px" }} /> Blog
               </Nav.Link>
             </Nav.Item>
           </Nav>

@@ -4,50 +4,55 @@ import { Link } from "react-router-dom";
 import Particle from "../Particle";
 import "./Animations.css";
 
-const animations = [
+const blogPosts = [
   {
     id: "https-key-exchange",
     title: "HTTPS Key Exchange",
     summary:
-      "Follow the TLS handshake as the client and server negotiate a secure channel.",
-    tags: ["Networking", "Security"],
-    path: "/animations/https-key-exchange"
+      "See the TLS handshake unfold step-by-step to demystify how secure sessions begin.",
+    tags: ["Security", "Networking"],
+    topic: "Zero Trust Foundations",
+    readingTime: "6 min read",
+    path: "/blog/https-key-exchange"
   },
   {
     id: "icmp-ping",
     title: "ICMP Ping",
     summary:
-      "Trace an ICMP echo request and reply to see how connectivity checks work.",
+      "Follow an animated packet trace to learn how everyday connectivity checks succeed or fail.",
     tags: ["Diagnostics", "Networking"],
-    path: "/animations/icmp-ping"
+    topic: "Day-2 Operations",
+    readingTime: "5 min read",
+    path: "/blog/icmp-ping"
   }
 ];
 
-function Animations() {
+function Blog() {
   return (
-    <Container fluid className="animation-section">
+    <section className="blog-page">
       <Particle />
-      <Container>
-        <h1 className="project-heading">
-          Explore <strong className="purple">Animations</strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Choose a card to open a dedicated walkthrough.
+
+      <Container className="blog-posts home-surface">
+        <p className="section-eyebrow">Welcome</p>
+        <h1 className="blog-heading">Stories that animate DevOps fundamentals</h1>
+        <p className="blog-subheading">
+          Each post is a short, visual walkthrough designed to make platform concepts memorable—watch packets move, pipelines evolve, and reliability patterns come alive.
         </p>
-        <Row className="justify-content-center g-4">
-          {animations.map((animation) => (
-            <Col md={6} lg={4} key={animation.id} className="animation-card">
-              <Card
-                as={Link}
-                to={animation.path}
-                className="animation-card-view"
-              >
+        <p className="section-eyebrow">Latest entries</p>
+        <Row className="g-4 blog-post-row">
+          {blogPosts.map((post) => (
+            <Col md={6} key={post.id} className="blog-card-col">
+              <Card as={Link} to={post.path} className="blog-card">
                 <Card.Body>
-                  <Card.Title>{animation.title}</Card.Title>
-                  <Card.Text>{animation.summary}</Card.Text>
-                  <div className="animation-tags">
-                    {animation.tags.map((tag) => (
-                      <span key={tag} className="animation-tag">
+                  <div className="blog-card-meta">
+                    <span className="blog-card-topic">{post.topic}</span>
+                    <span className="blog-card-time">{post.readingTime}</span>
+                  </div>
+                  <Card.Title className="blog-card-title">{post.title}</Card.Title>
+                  <Card.Text className="blog-card-summary">{post.summary}</Card.Text>
+                  <div className="blog-card-tags">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="blog-card-tag">
                         {tag}
                       </span>
                     ))}
@@ -58,8 +63,8 @@ function Animations() {
           ))}
         </Row>
       </Container>
-    </Container>
+    </section>
   );
 }
 
-export default Animations;
+export default Blog;
