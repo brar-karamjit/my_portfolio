@@ -1,29 +1,38 @@
 name: Deploy Portfolio
+# Build the React site on pushes to main and deploy it through GitHub Pages.
 
 on:
+  # Trigger this workflow whenever main gets new commits so production stays in sync.
   push:
     branches:
       - main
 
 permissions:
+  # Grant just enough permissions to read the repo, upload the artifact, and authenticate the deploy (OIDC token).
   contents: read
   pages: write
   id-token: write
 
 concurrency:
+  # Ensure only one Pages deployment runs at a time, avoiding dueling uploads for the same environment.
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Two-stage pipeline: build the static site artifact, then publish it to the GitHub Pages infrastructure.
   build:
     runs-on: ubuntu-latest
+    # Stage 1: Perform a deterministic Node build and bundle the result as a reusable artifact.
     steps:
+      # Fetch the exact revision that triggered this workflow so the build reflects the latest main commit.
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Register this run with GitHub Pages; defines the artifact name and primes environment metadata.
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      # Install the requested Node runtime (v20) and enable dependency caching scoped by package-lock.json.
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -32,15 +41,19 @@ jobs:
           cache-dependency-path: |
             package-lock.json
 
+      # Emit the resolved npm cache directory so troubleshooting cache misses is easier in the logs.
       - name: Show npm cache path
         run: npm config get cache
 
+      # Install an exact dependency tree based on package-lock.json for reproducible builds.
       - name: Install dependencies
         run: npm ci
 
+      # Run the React production build, which outputs optimized static assets into build/.
       - name: Build project
         run: npm run build
 
+      # Archive the build/ directory as the special github-pages artifact consumed by the deploy job.
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
@@ -53,6 +66,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     steps:
+      # Stage 2: publish the previously uploaded artifact through the GitHub Pages deployment engine.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        # Retrieves the github-pages artifact, updates the gh-pages branch behind the scenes, and returns the live URL.
