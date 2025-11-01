@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import Timeline from "./Timeline";
 import gradImg from "../../Assets/grad.jpeg";
