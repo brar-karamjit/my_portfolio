@@ -24,9 +24,6 @@ function Home() {
               </span>
               <h1 className="home-title">
                 Hi there!
-                <span className="wave" role="img" aria-label="waving hand">
-                  👋🏻
-                </span>
               </h1>
               <h2 className="home-name">
                 I'm <span>Karamjit Brar</span>
