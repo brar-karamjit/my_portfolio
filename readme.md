@@ -33,5 +33,14 @@ src/
 - Update the assets in `src/Assets` to reflect new projects or branding.
 - Adjust environment-specific links (GitHub, LinkedIn, resumes) inside the relevant components before publishing.
 
+## GitHub Pages Deployment
+1. Push or merge to the `main` branch – the included workflow automatically builds the React app and publishes it to the `gh-pages` branch using GitHub Actions.
+2. The first time you deploy, open **Settings → Pages** in your repository, choose **GitHub Actions** as the source, and save.
+3. Visit `https://brar-karamjit.github.io/my_portfolio` once the workflow finishes. Cache invalidation can take a minute.
+
+### Local verification before pushing (optional)
+- `npm run build` – confirm the production bundle succeeds locally.
+- Serve the `build/` directory (for example, with `npx serve build`) to preview the exact assets that will ship to GitHub Pages.
+
 ## License
 MIT
