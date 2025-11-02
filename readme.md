@@ -21,17 +21,23 @@
 
 ## Tech Stack at a Glance
 
-**Frameworks & UI**<br>
+**Frameworks & Languages**<br>
 <img src="src/Assets/TechIcons/React.svg" alt="React" height="40" />
-<img src="src/Assets/TechIcons/Redux.svg" alt="Redux" height="40" />
-<img src="src/Assets/TechIcons/Tailwind.svg" alt="Tailwind" height="40" />
-<img src="src/Assets/TechIcons/MUI.svg" alt="Material UI" height="40" />
+<img src="src/Assets/TechIcons/Python.svg" alt="Python" height="40" />
+<img src="src/Assets/TechIcons/Java.svg" alt="Java" height="40" />
 
-**Tooling & Platform**<br>
-<img src="src/Assets/TechIcons/Node.svg" alt="Node.js" height="40" />
+**Platforms & Tooling**<br>
 <img src="src/Assets/TechIcons/Git.svg" alt="Git" height="40" />
+<img src="src/Assets/TechIcons/Docker.svg" alt="Docker" height="40" />
+<img src="src/Assets/TechIcons/Kubernates.svg" alt="Kubernetes" height="40" />
+<img src="src/Assets/TechIcons/Postman.svg" alt="Postman" height="40" />
 <img src="src/Assets/TechIcons/AWS.svg" alt="AWS" height="40" />
+<img src="src/Assets/TechIcons/terraform.svg" alt="Terraform" height="40" />
 <img src="src/Assets/TechIcons/jenkins.svg" alt="Jenkins" height="40" />
+<img src="src/Assets/TechIcons/ansible.svg" alt="Ansible" height="40" />
+<img src="src/Assets/TechIcons/prometheus.svg" alt="Prometheus" height="40" />
+<img src="src/Assets/TechIcons/gcp.svg" alt="Google Cloud" height="40" />
+<img src="src/Assets/TechIcons/powershell.svg" alt="PowerShell" height="40" />
 
 ## Getting Started
 1. `npm install` – install dependencies.
