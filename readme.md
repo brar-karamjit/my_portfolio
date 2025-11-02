@@ -1,5 +1,7 @@
 # My Portfolio
 
+[![Deploy Portfolio](https://github.com/brar-karamjit/my_portfolio/actions/workflows/deploy-portfolio.yml/badge.svg)](https://github.com/brar-karamjit/my_portfolio/actions/workflows/deploy-portfolio.yml)
+
 Personal portfolio website built with React to showcase professional experience, tools, and projects.
 
 ## Highlights
@@ -34,13 +36,20 @@ src/
 - Adjust environment-specific links (GitHub, LinkedIn, resumes) inside the relevant components before publishing.
 
 ## GitHub Pages Deployment
-1. Push or merge to the `main` branch – the included workflow automatically builds the React app and publishes it to the `gh-pages` branch using GitHub Actions.
+1. Push or merge to the `main` branch – the `Deploy Portfolio` workflow builds the React app and publishes it to GitHub Pages.
 2. The first time you deploy, open **Settings → Pages** in your repository, choose **GitHub Actions** as the source, and save.
 3. Visit `https://brar-karamjit.github.io/my_portfolio` once the workflow finishes. Cache invalidation can take a minute.
 
 ### Local verification before pushing (optional)
 - `npm run build` – confirm the production bundle succeeds locally.
 - Serve the `build/` directory (for example, with `npx serve build`) to preview the exact assets that will ship to GitHub Pages.
+
+## GitHub Actions Workflow
+- Workflow file: `.github/workflows/deploy-portfolio.yml`.
+- Trigger: runs on every push to `main` so the live site mirrors the default branch.
+- Build stage: checks out the repo, caches npm dependencies, runs `npm ci`, and generates the production bundle with `npm run build`.
+- Deploy stage: uploads the production `build/` directory as a Pages artifact and publishes it with `actions/deploy-pages`.
+- View logs: open the latest run in the **Actions** tab to inspect build output or rerun a failed job.
 
 ## License
 MIT
