@@ -1,5 +1,5 @@
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0;
@@ -8,12 +8,8 @@
   padding-top: 10px !important;
   padding-bottom: 8px !important;
   box-shadow: 0 -6px 16px rgba(0, 0, 0, 0.22);
-  transform: translateY(100%);
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    transform 0.4s ease,
-    opacity 0.3s ease;
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .footer--visible {
