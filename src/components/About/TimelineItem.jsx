@@ -1,11 +1,19 @@
 import React from "react";
 
-const TimelineItem = ({ year, title, description, icon }) => {
+const TimelineItem = ({ year, title, description, icon, iconSrc, iconAlt }) => {
   return (
     <div className="timeline-item">
       <div className="timeline-marker" aria-hidden="true">
         <span className="timeline-marker-node" />
-        <span className="timeline-icon">{icon || "💡"}</span>
+        <span className="timeline-icon">
+          {iconSrc ? (
+            <img src={iconSrc} alt={iconAlt || "Timeline milestone"} />
+          ) : (
+            <span role="img" aria-label={iconAlt || "Timeline milestone"}>
+              {icon || "💡"}
+            </span>
+          )}
+        </span>
       </div>
       <div className="timeline-content">
         <span className="timeline-year">{year}</span>
