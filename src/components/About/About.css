@@ -162,23 +162,33 @@
   margin-bottom: 0.9rem;
 }
 
-.about-card-list {
+.about-card-interest-grid {
   display: grid;
-  gap: 0.85rem;
+  gap: 1rem;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
-.about-card-list li {
+.about-card-interest {
   display: flex;
-  align-items: center;
-  gap: 0.7rem;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 18px;
+  background: rgba(6, 14, 32, 0.6);
+  border: 1px solid rgba(100, 255, 218, 0.12);
+  box-shadow: 0 18px 40px rgba(5, 12, 26, 0.35);
   color: var(--home-text-muted);
 }
 
-.about-card-list svg {
-  color: var(--home-accent-light);
+.about-card-interest-icon {
+  font-size: 1.8rem;
+}
+
+.about-card-interest-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--home-text-primary);
 }
 
 .about-timeline-subtitle {
@@ -310,6 +320,11 @@
 
   .about-card-facts {
     justify-items: center;
+  }
+
+  .about-card-interest {
+    align-items: center;
+    text-align: center;
   }
 
   .timeline-track::before {

@@ -1,6 +1,23 @@
 import React from "react";
-import { ImPointRight } from "react-icons/im";
 import "./About.css";
+
+const interests = [
+  {
+    title: "Playing story-driven games",
+    icon: "🎮",
+    label: "Game controller emoji",
+  },
+  {
+    title: "Experimenting with new recipes",
+    icon: "🍳",
+    label: "Cooking emoji",
+  },
+  {
+    title: "Exploring new places and cultures",
+    icon: "🌍",
+    label: "Globe emoji",
+  },
+];
 
 function AboutCard() {
   return (
@@ -29,21 +46,17 @@ function AboutCard() {
         </div>
       </div>
       <div className="about-card-hobbies">
-        <span className="about-card-hobbies-label">Outside the terminal</span>
-        <ul className="about-card-list">
-          <li>
-            <ImPointRight aria-hidden="true" />
-            <span>Playing story-driven games 🎮</span>
-          </li>
-          <li>
-            <ImPointRight aria-hidden="true" />
-            <span>Experimenting with new recipes 🍳</span>
-          </li>
-          <li>
-            <ImPointRight aria-hidden="true" />
-            <span>Exploring new places and cultures 🌍</span>
-          </li>
-        </ul>
+        <span className="about-card-hobbies-label">Interests and Hobbies</span>
+        <div className="about-card-interest-grid">
+          {interests.map(({ title, icon, label }) => (
+            <div className="about-card-interest" key={title}>
+              <span className="about-card-interest-icon" role="img" aria-label={label}>
+                {icon}
+              </span>
+              <span className="about-card-interest-title">{title}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
