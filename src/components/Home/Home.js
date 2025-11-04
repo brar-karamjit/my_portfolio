@@ -20,7 +20,7 @@ function Home() {
           <Row className="align-items-center home-hero-row">
             <Col md={7} className="home-header home-hero-text">
               <span className="home-hero-badge">
-                DevOps Engineer · Cloud &amp; Automation
+                Platform Engineer · Cloud &amp; Automation
               </span>
               <h1 className="home-title">
                 Hi there!
