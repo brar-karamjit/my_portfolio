@@ -19,6 +19,7 @@ import ansible from "../../Assets/TechIcons/ansible.svg";
 import gcp from "../../Assets/TechIcons/gcp.svg";
 import powershell from "../../Assets/TechIcons/powershell.svg";
 import prometheus from "../../Assets/TechIcons/prometheus.svg";
+import grafana from "../../Assets/TechIcons/grafana.svg";
 
 function Techstack() {
   return (
@@ -84,6 +85,11 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <img src={prometheus} alt="Prometheus" className="tech-icon-images" />
         <div className="tech-icons-text">Prometheus</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={grafana} alt="Grafana" className="tech-icon-images" />
+        <div className="tech-icons-text">Grafana</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
