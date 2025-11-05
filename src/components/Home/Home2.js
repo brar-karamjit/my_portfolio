@@ -11,10 +11,10 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME INTRODUCE MYSELF
+              Let me introduce myself
             </h1>
             <p className="home-about-body">
-              I'm a DevOps Engineer specializing in cloud and on-prem infrastructure and automation.
+              I'm a Platform Engineer specializing in DevOps, cloud, and hybrid infrastructure.
               With hands-on experience in enterprise environments, I focus on building
               scalable, efficient systems and streamlining deployment processes.
               <br />
