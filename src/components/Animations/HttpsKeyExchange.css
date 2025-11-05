@@ -93,6 +93,15 @@
   transition: filter 0.4s ease;
 }
 
+.node-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.4);
+  padding: 8px;
+}
+
 .node-label {
   font-weight: 600;
   letter-spacing: 0.05em;

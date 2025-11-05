@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import bankImage from "../../Assets/bank.png";
 import "./HttpsKeyExchange.css";
 
 const steps = [
@@ -302,13 +303,39 @@ function HttpsKeyExchange() {
         {/* User - Person Icon */}
         <motion.div className="node user" animate={userControls}>
           <svg width="80" height="80" viewBox="0 0 80 80" className="node-svg">
+            {/* Hair */}
+            <path
+              d="M29 25 C29 15 34.5 10 40 10 C45.5 10 51 15 51 25 C51 25 51 27 50.5 28"
+              fill="#1e40af"
+              stroke="#1e40af"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
             {/* Head */}
-            <circle cx="40" cy="28" r="12" fill="none" stroke="#3b82f6" strokeWidth="2.5"/>
-            {/* Shoulders/Body */}
-            <path 
-              d="M 20 65 Q 20 48, 40 48 Q 60 48, 60 65" 
-              fill="none" 
-              stroke="#3b82f6" 
+            <circle cx="40" cy="26" r="11.5" fill="#3b82f6" stroke="#1e40af" strokeWidth="2.5"/>
+            {/* Shoulders and torso */}
+            <path
+              d="M24 66 C24 50 31 38 40 38 C49 38 56 50 56 66 V72 H24 Z"
+              fill="#3b82f6"
+              stroke="#1e40af"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Collar */}
+            <path
+              d="M32 46 L40 54 L48 46"
+              fill="none"
+              stroke="#1e40af"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            {/* Chest detail */}
+            <path
+              d="M32 62 C32 55 35.5 50.5 40 50.5 C44.5 50.5 48 55 48 62"
+              fill="none"
+              stroke="#1e40af"
               strokeWidth="2.5"
               strokeLinecap="round"
             />
@@ -324,27 +351,14 @@ function HttpsKeyExchange() {
           </motion.div>
         </motion.div>
 
-        {/* Bank - Building Icon */}
+        {/* Bank - Image Icon */}
         <motion.div className="node bank" animate={bankControls}>
-          <svg width="80" height="80" viewBox="0 0 80 80" className="node-svg">
-            {/* Roof/Triangle */}
-            <path 
-              d="M 10 35 L 40 15 L 70 35" 
-              fill="none" 
-              stroke="#9ca3af" 
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-            {/* Base */}
-            <rect x="15" y="35" width="50" height="4" fill="none" stroke="#9ca3af" strokeWidth="2.5"/>
-            {/* Pillars */}
-            <rect x="20" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
-            <rect x="32" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
-            <rect x="44" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
-            <rect x="56" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
-            {/* Foundation */}
-            <rect x="15" y="59" width="50" height="6" fill="none" stroke="#9ca3af" strokeWidth="2.5"/>
-          </svg>
+          <img
+            src={bankImage}
+            alt="Bank"
+            className="node-svg node-image"
+            draggable="false"
+          />
           <span className="node-label">Bank</span>
           <motion.div className="node-key-display" animate={bankKeyControls}>
             <svg width="24" height="24" viewBox="0 0 24 24" className="key-svg">
