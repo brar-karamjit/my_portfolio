@@ -54,63 +54,63 @@ function HttpsKeyExchange() {
       userKeyControls.set({ opacity: 0, scale: 0.6, y: 0 });
       bankKeyControls.set({ opacity: 0, scale: 0.6, y: 0 });
 
-      await wait(320);
+      await wait(500);
       if (cancelled) return;
 
       setStepIndex(0);
       await Promise.all([
-        boxControls.start({ opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }),
-        redLockControls.start({ opacity: 1, scale: 1, transition: { duration: 0.45, ease: "easeOut", delay: 0.1 } }),
-        innerKeyControls.start({ opacity: 1, scale: 1, transition: { duration: 0.45, ease: "easeOut", delay: 0.2 } })
+        boxControls.start({ opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }),
+        redLockControls.start({ opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut", delay: 0.2 } }),
+        innerKeyControls.start({ opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut", delay: 0.3 } })
       ]);
       if (cancelled) return;
 
       setStepIndex(1);
-      await boxControls.start({ x: -160, transition: { duration: 0.95, ease: "easeInOut" } });
+      await boxControls.start({ x: -160, transition: { duration: 1.5, ease: "easeInOut" } });
       if (cancelled) return;
 
       setStepIndex(2);
-      await greenLockControls.start({ opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } });
+      await greenLockControls.start({ opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } });
       if (cancelled) return;
 
       setStepIndex(3);
-      await boxControls.start({ x: 160, transition: { duration: 0.95, ease: "easeInOut" } });
+      await boxControls.start({ x: 160, transition: { duration: 1.5, ease: "easeInOut" } });
       if (cancelled) return;
 
       setStepIndex(4);
-      await redLockControls.start({ opacity: 0, scale: 0.6, transition: { duration: 0.35, ease: "easeInOut" } });
+      await redLockControls.start({ opacity: 0, scale: 0.6, transition: { duration: 0.5, ease: "easeInOut" } });
       if (cancelled) return;
 
-      await wait(180);
+      await wait(300);
       if (cancelled) return;
 
-      await boxControls.start({ x: -160, transition: { duration: 0.95, ease: "easeInOut" } });
+      await boxControls.start({ x: -160, transition: { duration: 1.5, ease: "easeInOut" } });
       if (cancelled) return;
 
       setStepIndex(5);
-      await wait(200);
+      await wait(400);
       if (cancelled) return;
 
       setStepIndex(6);
       await Promise.all([
-        greenLockControls.start({ opacity: 0, scale: 0.6, transition: { duration: 0.35, ease: "easeInOut" } }),
-        innerKeyControls.start({ scale: 1.15, transition: { duration: 0.35, ease: "easeOut" } })
+        greenLockControls.start({ opacity: 0, scale: 0.6, transition: { duration: 0.5, ease: "easeInOut" } }),
+        innerKeyControls.start({ scale: 1.15, transition: { duration: 0.5, ease: "easeOut" } })
       ]);
       if (cancelled) return;
 
-      await wait(220);
+      await wait(400);
       if (cancelled) return;
 
       setStepIndex(7);
       await Promise.all([
-        userKeyControls.start({ opacity: 1, y: -8, scale: 1, transition: { duration: 0.4, ease: "easeOut" } }),
-        bankKeyControls.start({ opacity: 1, y: -8, scale: 1, transition: { duration: 0.4, ease: "easeOut", delay: 0.1 } }),
-        userControls.start({ boxShadow: "0 0 18px rgba(59, 130, 246, 0.35)", transition: { duration: 0.45, ease: "easeInOut" } }),
-        bankControls.start({ boxShadow: "0 0 18px rgba(16, 185, 129, 0.35)", transition: { duration: 0.45, ease: "easeInOut" } })
+        userKeyControls.start({ opacity: 1, y: -8, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }),
+        bankKeyControls.start({ opacity: 1, y: -8, scale: 1, transition: { duration: 0.6, ease: "easeOut", delay: 0.15 } }),
+        userControls.start({ boxShadow: "0 0 18px rgba(59, 130, 246, 0.35)", transition: { duration: 0.7, ease: "easeInOut" } }),
+        bankControls.start({ boxShadow: "0 0 18px rgba(16, 185, 129, 0.35)", transition: { duration: 0.7, ease: "easeInOut" } })
       ]);
       if (cancelled) return;
 
-      await innerKeyControls.start({ opacity: 0.25, scale: 0.95, transition: { duration: 0.35, ease: "easeOut" } });
+      await innerKeyControls.start({ opacity: 0.25, scale: 0.95, transition: { duration: 0.5, ease: "easeOut" } });
       if (cancelled) return;
 
       setIsPlaying(false);
