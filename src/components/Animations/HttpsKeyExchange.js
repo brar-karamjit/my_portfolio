@@ -169,34 +169,71 @@ function HttpsKeyExchange() {
       </div>
 
       <div className="https-stage">
+        {/* User - Blue Circle */}
         <motion.div className="node user" animate={userControls}>
+          <svg width="80" height="80" viewBox="0 0 80 80" className="node-svg">
+            <circle cx="40" cy="40" r="38" fill="#3b82f6" stroke="#1e40af" strokeWidth="3"/>
+          </svg>
           <span className="node-label">User</span>
           <motion.div className="node-key-display" animate={userKeyControls}>
-            <div className="key-shape"></div>
+            <svg width="24" height="24" viewBox="0 0 24 24" className="key-svg">
+              <circle cx="8" cy="8" r="5" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+              <rect x="12" y="6" width="10" height="4" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+              <rect x="17" y="4" width="2" height="2" fill="#1e40af"/>
+              <rect x="17" y="8" width="2" height="2" fill="#1e40af"/>
+            </svg>
           </motion.div>
         </motion.div>
 
+        {/* Bank - Gray Square */}
         <motion.div className="node bank" animate={bankControls}>
+          <svg width="80" height="80" viewBox="0 0 80 80" className="node-svg">
+            <rect x="2" y="2" width="76" height="76" rx="8" fill="#9ca3af" stroke="#6b7280" strokeWidth="3"/>
+          </svg>
           <span className="node-label">Bank</span>
           <motion.div className="node-key-display" animate={bankKeyControls}>
-            <div className="key-shape"></div>
+            <svg width="24" height="24" viewBox="0 0 24 24" className="key-svg">
+              <circle cx="8" cy="8" r="5" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+              <rect x="12" y="6" width="10" height="4" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+              <rect x="17" y="4" width="2" height="2" fill="#1e40af"/>
+              <rect x="17" y="8" width="2" height="2" fill="#1e40af"/>
+            </svg>
           </motion.div>
         </motion.div>
 
+        {/* Box - Rounded Rectangle */}
         <motion.div className="exchange-box" animate={boxControls}>
-          <div className="box-shell">
-            <motion.div className="box-key" animate={innerKeyControls}>
-              <div className="key-shape"></div>
-            </motion.div>
-            <motion.div className="lock lock-red" animate={redLockControls}>
-              <div className="lock-shackle-svg"></div>
-              <div className="lock-body-svg"></div>
-            </motion.div>
-            <motion.div className="lock lock-green" animate={greenLockControls}>
-              <div className="lock-shackle-svg"></div>
-              <div className="lock-body-svg"></div>
-            </motion.div>
-          </div>
+          <svg width="120" height="80" viewBox="0 0 120 80" className="box-svg">
+            <rect x="2" y="2" width="116" height="76" rx="12" fill="#fde68a" stroke="#f59e0b" strokeWidth="3"/>
+          </svg>
+          
+          {/* Blue Key Inside Box */}
+          <motion.div className="box-key" animate={innerKeyControls}>
+            <svg width="28" height="28" viewBox="0 0 28 28" className="key-svg">
+              <circle cx="10" cy="10" r="6" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+              <rect x="15" y="8" width="11" height="4" fill="#3b82f6" stroke="#1e40af" strokeWidth="2"/>
+              <rect x="21" y="6" width="2" height="2" fill="#1e40af"/>
+              <rect x="21" y="10" width="2" height="2" fill="#1e40af"/>
+            </svg>
+          </motion.div>
+
+          {/* Red Lock */}
+          <motion.div className="lock lock-red" animate={redLockControls}>
+            <svg width="28" height="34" viewBox="0 0 28 34" className="lock-svg">
+              <path d="M8 14 V9 A6 6 0 0 1 20 9 V14" stroke="#991b1b" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              <rect x="2" y="14" width="24" height="18" rx="4" fill="#dc2626" stroke="#7f1d1d" strokeWidth="2"/>
+              <circle cx="14" cy="23" r="2" fill="#7f1d1d"/>
+            </svg>
+          </motion.div>
+
+          {/* Green Lock */}
+          <motion.div className="lock lock-green" animate={greenLockControls}>
+            <svg width="28" height="34" viewBox="0 0 28 34" className="lock-svg">
+              <path d="M8 14 V9 A6 6 0 0 1 20 9 V14" stroke="#16a34a" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              <rect x="2" y="14" width="24" height="18" rx="4" fill="#22c55e" stroke="#15803d" strokeWidth="2"/>
+              <circle cx="14" cy="23" r="2" fill="#15803d"/>
+            </svg>
+          </motion.div>
         </motion.div>
       </div>
 
