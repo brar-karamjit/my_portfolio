@@ -59,58 +59,79 @@ function HttpsKeyExchange() {
 
       setStepIndex(0);
       await Promise.all([
-        boxControls.start({ opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }),
-        redLockControls.start({ opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut", delay: 0.2 } }),
-        innerKeyControls.start({ opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut", delay: 0.3 } })
+        boxControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 150, damping: 15 } }),
+        redLockControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200, damping: 20, delay: 0.2 } }),
+        innerKeyControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200, damping: 20, delay: 0.3 } })
       ]);
       if (cancelled) return;
 
+      await wait(600);
+      if (cancelled) return;
+
       setStepIndex(1);
-      await boxControls.start({ x: -160, transition: { duration: 1.5, ease: "easeInOut" } });
+      await boxControls.start({ x: -160, transition: { type: "spring", stiffness: 80, damping: 18 } });
+      if (cancelled) return;
+
+      await wait(400);
       if (cancelled) return;
 
       setStepIndex(2);
-      await greenLockControls.start({ opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } });
+      await greenLockControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 250, damping: 18 } });
+      if (cancelled) return;
+
+      await wait(600);
       if (cancelled) return;
 
       setStepIndex(3);
-      await boxControls.start({ x: 160, transition: { duration: 1.5, ease: "easeInOut" } });
+      await boxControls.start({ x: 160, transition: { type: "spring", stiffness: 80, damping: 18 } });
+      if (cancelled) return;
+
+      await wait(400);
       if (cancelled) return;
 
       setStepIndex(4);
-      await redLockControls.start({ opacity: 0, scale: 0.6, transition: { duration: 0.5, ease: "easeInOut" } });
+      await redLockControls.start({ opacity: 0, scale: 0.5, transition: { duration: 0.4, ease: "easeOut" } });
       if (cancelled) return;
 
-      await wait(300);
+      await wait(500);
       if (cancelled) return;
 
-      await boxControls.start({ x: -160, transition: { duration: 1.5, ease: "easeInOut" } });
+      await boxControls.start({ x: -160, transition: { type: "spring", stiffness: 80, damping: 18 } });
+      if (cancelled) return;
+
+      await wait(400);
       if (cancelled) return;
 
       setStepIndex(5);
-      await wait(400);
+      await wait(300);
       if (cancelled) return;
 
       setStepIndex(6);
       await Promise.all([
-        greenLockControls.start({ opacity: 0, scale: 0.6, transition: { duration: 0.5, ease: "easeInOut" } }),
-        innerKeyControls.start({ scale: 1.15, transition: { duration: 0.5, ease: "easeOut" } })
+        greenLockControls.start({ opacity: 0, scale: 0.5, transition: { duration: 0.4, ease: "easeOut" } }),
+        innerKeyControls.start({ scale: 1.2, transition: { type: "spring", stiffness: 200, damping: 15 } })
       ]);
       if (cancelled) return;
 
-      await wait(400);
+      await wait(500);
       if (cancelled) return;
 
       setStepIndex(7);
       await Promise.all([
-        userKeyControls.start({ opacity: 1, y: -8, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }),
-        bankKeyControls.start({ opacity: 1, y: -8, scale: 1, transition: { duration: 0.6, ease: "easeOut", delay: 0.15 } }),
-        userControls.start({ boxShadow: "0 0 18px rgba(59, 130, 246, 0.35)", transition: { duration: 0.7, ease: "easeInOut" } }),
-        bankControls.start({ boxShadow: "0 0 18px rgba(16, 185, 129, 0.35)", transition: { duration: 0.7, ease: "easeInOut" } })
+        userKeyControls.start({ opacity: 1, y: -12, scale: 1, transition: { type: "spring", stiffness: 200, damping: 15 } }),
+        bankKeyControls.start({ opacity: 1, y: -12, scale: 1, transition: { type: "spring", stiffness: 200, damping: 15, delay: 0.15 } }),
+        userControls.start({ 
+          boxShadow: "0 0 24px rgba(59, 130, 246, 0.5), 0 0 48px rgba(59, 130, 246, 0.2)", 
+          transition: { duration: 0.8, ease: "easeInOut" } 
+        }),
+        bankControls.start({ 
+          boxShadow: "0 0 24px rgba(16, 185, 129, 0.5), 0 0 48px rgba(16, 185, 129, 0.2)", 
+          transition: { duration: 0.8, ease: "easeInOut" } 
+        })
       ]);
       if (cancelled) return;
 
-      await innerKeyControls.start({ opacity: 0.25, scale: 0.95, transition: { duration: 0.5, ease: "easeOut" } });
+      await innerKeyControls.start({ opacity: 0.2, scale: 1, transition: { duration: 0.4, ease: "easeOut" } });
       if (cancelled) return;
 
       setIsPlaying(false);
@@ -150,47 +171,31 @@ function HttpsKeyExchange() {
       <div className="https-stage">
         <motion.div className="node user" animate={userControls}>
           <span className="node-label">User</span>
-          <motion.span className="node-key" animate={userKeyControls} role="img" aria-label="User key">
-            🔑
-          </motion.span>
+          <motion.div className="node-key-display" animate={userKeyControls}>
+            <div className="key-shape"></div>
+          </motion.div>
         </motion.div>
 
         <motion.div className="node bank" animate={bankControls}>
           <span className="node-label">Bank</span>
-          <motion.span className="node-key" animate={bankKeyControls} role="img" aria-label="Bank key">
-            🔑
-          </motion.span>
+          <motion.div className="node-key-display" animate={bankKeyControls}>
+            <div className="key-shape"></div>
+          </motion.div>
         </motion.div>
 
         <motion.div className="exchange-box" animate={boxControls}>
           <div className="box-shell">
-            <motion.span className="box-key" animate={innerKeyControls} role="img" aria-label="Blue key inside box">
-              🔑
-            </motion.span>
-            <motion.svg
-              className="lock lock-red"
-              animate={redLockControls}
-              width="28"
-              height="34"
-              viewBox="0 0 28 34"
-              aria-label="Red lock"
-            >
-              <rect x="2" y="14" width="24" height="18" rx="4" fill="#991b1b" stroke="#7f1d1d" strokeWidth="2" />
-              <path d="M8 14 V9 A6 6 0 0 1 20 9 V14" stroke="#7f1d1d" strokeWidth="3" fill="none" strokeLinecap="round" />
-              <rect x="12" y="20" width="4" height="6" rx="1" fill="rgba(0, 0, 0, 0.3)" />
-            </motion.svg>
-            <motion.svg
-              className="lock lock-green"
-              animate={greenLockControls}
-              width="28"
-              height="34"
-              viewBox="0 0 28 34"
-              aria-label="Green lock"
-            >
-              <rect x="2" y="14" width="24" height="18" rx="4" fill="#22c55e" stroke="#16a34a" strokeWidth="2" />
-              <path d="M8 14 V9 A6 6 0 0 1 20 9 V14" stroke="#16a34a" strokeWidth="3" fill="none" strokeLinecap="round" />
-              <rect x="12" y="20" width="4" height="6" rx="1" fill="rgba(0, 0, 0, 0.3)" />
-            </motion.svg>
+            <motion.div className="box-key" animate={innerKeyControls}>
+              <div className="key-shape"></div>
+            </motion.div>
+            <motion.div className="lock lock-red" animate={redLockControls}>
+              <div className="lock-shackle-svg"></div>
+              <div className="lock-body-svg"></div>
+            </motion.div>
+            <motion.div className="lock lock-green" animate={greenLockControls}>
+              <div className="lock-shackle-svg"></div>
+              <div className="lock-body-svg"></div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
