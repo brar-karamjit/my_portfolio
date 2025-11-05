@@ -15,6 +15,9 @@ const steps = [
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const BOX_POSITION_BANK = 100;
+const BOX_POSITION_USER = -200;
+
 function HttpsKeyExchange() {
   const userControls = useAnimation();
   const bankControls = useAnimation();
@@ -47,91 +50,173 @@ function HttpsKeyExchange() {
 
       userControls.set({ scale: 1, boxShadow: "0 0 0 rgba(59, 130, 246, 0)" });
       bankControls.set({ scale: 1, boxShadow: "0 0 0 rgba(59, 130, 246, 0)" });
-      boxControls.set({ x: 160, opacity: 0, scale: 0.9 });
-      redLockControls.set({ opacity: 0, scale: 0.6 });
-      greenLockControls.set({ opacity: 0, scale: 0.6 });
-      innerKeyControls.set({ opacity: 0, scale: 0.75 });
-      userKeyControls.set({ opacity: 0, scale: 0.6, y: 0 });
-      bankKeyControls.set({ opacity: 0, scale: 0.6, y: 0 });
+      boxControls.set({ x: BOX_POSITION_BANK, y: 0, opacity: 0, scale: 1 });
+      redLockControls.set({ opacity: 0, scale: 0.6, rotate: 0, y: 0 });
+      greenLockControls.set({ opacity: 0, scale: 0.6, rotate: 0, y: 0 });
+      innerKeyControls.set({ opacity: 0, scale: 0.75, filter: "drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))" });
+      userKeyControls.set({ opacity: 0, scale: 0.6, y: 0, filter: "drop-shadow(0 0 12px rgba(59, 130, 246, 0.6))" });
+      bankKeyControls.set({ opacity: 0, scale: 0.6, y: 0, filter: "drop-shadow(0 0 12px rgba(59, 130, 246, 0.6))" });
 
       await wait(500);
       if (cancelled) return;
 
+      // Step 0: Bank sends box with red lock
       setStepIndex(0);
       await Promise.all([
-        boxControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 150, damping: 15 } }),
-        redLockControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200, damping: 20, delay: 0.2 } }),
-        innerKeyControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200, damping: 20, delay: 0.3 } })
+        boxControls.start({ 
+          opacity: 1, 
+          scale: 1,
+          y: 0,
+          transition: { duration: 0.4, ease: "easeOut" } 
+        }),
+        redLockControls.start({ 
+          opacity: 1, 
+          scale: 1,
+          rotate: [10, -5, 0],
+          y: [20, -5, 0],
+          transition: { type: "spring", stiffness: 200, damping: 18, delay: 0.3 } 
+        }),
+        innerKeyControls.start({ 
+          opacity: 1, 
+          scale: 1, 
+          transition: { type: "spring", stiffness: 200, damping: 20, delay: 0.4 } 
+        })
       ]);
       if (cancelled) return;
 
-      await wait(600);
+      await wait(800);
       if (cancelled) return;
 
+      // Step 1: Box moves to User
       setStepIndex(1);
-      await boxControls.start({ x: -160, transition: { type: "spring", stiffness: 80, damping: 18 } });
-      if (cancelled) return;
-
-      await wait(400);
-      if (cancelled) return;
-
-      setStepIndex(2);
-      await greenLockControls.start({ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 250, damping: 18 } });
-      if (cancelled) return;
-
-      await wait(600);
-      if (cancelled) return;
-
-      setStepIndex(3);
-      await boxControls.start({ x: 160, transition: { type: "spring", stiffness: 80, damping: 18 } });
-      if (cancelled) return;
-
-      await wait(400);
-      if (cancelled) return;
-
-      setStepIndex(4);
-      await redLockControls.start({ opacity: 0, scale: 0.5, transition: { duration: 0.4, ease: "easeOut" } });
+      await boxControls.start({ 
+        x: BOX_POSITION_USER,
+        transition: { 
+          duration: 1.5, 
+          ease: [0, 0, 1, 1] // Perfectly linear cubic bezier
+        } 
+      });
       if (cancelled) return;
 
       await wait(500);
       if (cancelled) return;
 
-      await boxControls.start({ x: -160, transition: { type: "spring", stiffness: 80, damping: 18 } });
+      // Step 2: User adds green lock
+      setStepIndex(2);
+      await greenLockControls.start({ 
+        opacity: 1, 
+        scale: 1,
+        rotate: [-10, 5, 0],
+        y: [20, -5, 0],
+        transition: { type: "spring", stiffness: 220, damping: 18 } 
+      });
       if (cancelled) return;
 
+      await wait(700);
+      if (cancelled) return;
+
+      // Step 3: Box returns to Bank
+      setStepIndex(3);
+      await boxControls.start({ 
+        x: BOX_POSITION_BANK,
+        transition: { 
+          duration: 1.5, 
+          ease: [0, 0, 1, 1] // Perfectly linear cubic bezier
+        } 
+      });
+      if (cancelled) return;
+
+      await wait(500);
+      if (cancelled) return;
+
+      // Step 4: Bank removes red lock
+      setStepIndex(4);
+      await redLockControls.start({ 
+        opacity: 0, 
+        scale: 0.8,
+        rotate: 25,
+        y: -20,
+        transition: { duration: 0.5, ease: [0.4, 0.0, 0.2, 1] } 
+      });
+      if (cancelled) return;
+
+      await wait(600);
+      if (cancelled) return;
+
+      // Box returns to User
+      await boxControls.start({ 
+        x: BOX_POSITION_USER,
+        transition: { 
+          duration: 1.5, 
+          ease: [0, 0, 1, 1] // Perfectly linear cubic bezier
+        } 
+      });
+      if (cancelled) return;
+
+      await wait(500);
+      if (cancelled) return;
+
+      // Step 5: Pause at User
+      setStepIndex(5);
       await wait(400);
       if (cancelled) return;
 
-      setStepIndex(5);
-      await wait(300);
-      if (cancelled) return;
-
+      // Step 6: User removes green lock and reveals key
       setStepIndex(6);
       await Promise.all([
-        greenLockControls.start({ opacity: 0, scale: 0.5, transition: { duration: 0.4, ease: "easeOut" } }),
-        innerKeyControls.start({ scale: 1.2, transition: { type: "spring", stiffness: 200, damping: 15 } })
+        greenLockControls.start({ 
+          opacity: 0, 
+          scale: 0.8,
+          rotate: -25,
+          y: -20,
+          transition: { duration: 0.5, ease: [0.4, 0.0, 0.2, 1] } 
+        }),
+        innerKeyControls.start({ 
+          scale: 1.3,
+          filter: "drop-shadow(0 0 16px rgba(59, 130, 246, 0.8))",
+          transition: { type: "spring", stiffness: 180, damping: 15 } 
+        })
       ]);
       if (cancelled) return;
 
-      await wait(500);
+      await wait(600);
       if (cancelled) return;
 
+      // Step 7: Both parties show keys with glow
       setStepIndex(7);
       await Promise.all([
-        userKeyControls.start({ opacity: 1, y: -12, scale: 1, transition: { type: "spring", stiffness: 200, damping: 15 } }),
-        bankKeyControls.start({ opacity: 1, y: -12, scale: 1, transition: { type: "spring", stiffness: 200, damping: 15, delay: 0.15 } }),
+        userKeyControls.start({ 
+          opacity: 1, 
+          y: -16, 
+          scale: 1,
+          filter: "drop-shadow(0 0 20px rgba(59, 130, 246, 0.9))",
+          transition: { type: "spring", stiffness: 180, damping: 14 } 
+        }),
+        bankKeyControls.start({ 
+          opacity: 1, 
+          y: -16, 
+          scale: 1,
+          filter: "drop-shadow(0 0 20px rgba(59, 130, 246, 0.9))",
+          transition: { type: "spring", stiffness: 180, damping: 14, delay: 0.15 } 
+        }),
         userControls.start({ 
-          boxShadow: "0 0 24px rgba(59, 130, 246, 0.5), 0 0 48px rgba(59, 130, 246, 0.2)", 
+          scale: 1.05,
+          boxShadow: "0 0 32px rgba(59, 130, 246, 0.6), 0 0 64px rgba(59, 130, 246, 0.3)", 
           transition: { duration: 0.8, ease: "easeInOut" } 
         }),
         bankControls.start({ 
-          boxShadow: "0 0 24px rgba(16, 185, 129, 0.5), 0 0 48px rgba(16, 185, 129, 0.2)", 
+          scale: 1.05,
+          boxShadow: "0 0 32px rgba(156, 163, 175, 0.6), 0 0 64px rgba(156, 163, 175, 0.3)", 
           transition: { duration: 0.8, ease: "easeInOut" } 
         })
       ]);
       if (cancelled) return;
 
-      await innerKeyControls.start({ opacity: 0.2, scale: 1, transition: { duration: 0.4, ease: "easeOut" } });
+      await innerKeyControls.start({ 
+        opacity: 0.15, 
+        scale: 1.1,
+        transition: { duration: 0.5, ease: "easeOut" } 
+      });
       if (cancelled) return;
 
       setIsPlaying(false);
@@ -169,10 +254,19 @@ function HttpsKeyExchange() {
       </div>
 
       <div className="https-stage">
-        {/* User - Blue Circle */}
+        {/* User - Person Icon */}
         <motion.div className="node user" animate={userControls}>
           <svg width="80" height="80" viewBox="0 0 80 80" className="node-svg">
-            <circle cx="40" cy="40" r="38" fill="#3b82f6" stroke="#1e40af" strokeWidth="3"/>
+            {/* Head */}
+            <circle cx="40" cy="28" r="12" fill="none" stroke="#3b82f6" strokeWidth="2.5"/>
+            {/* Shoulders/Body */}
+            <path 
+              d="M 20 65 Q 20 48, 40 48 Q 60 48, 60 65" 
+              fill="none" 
+              stroke="#3b82f6" 
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
           </svg>
           <span className="node-label">User</span>
           <motion.div className="node-key-display" animate={userKeyControls}>
@@ -185,10 +279,26 @@ function HttpsKeyExchange() {
           </motion.div>
         </motion.div>
 
-        {/* Bank - Gray Square */}
+        {/* Bank - Building Icon */}
         <motion.div className="node bank" animate={bankControls}>
           <svg width="80" height="80" viewBox="0 0 80 80" className="node-svg">
-            <rect x="2" y="2" width="76" height="76" rx="8" fill="#9ca3af" stroke="#6b7280" strokeWidth="3"/>
+            {/* Roof/Triangle */}
+            <path 
+              d="M 10 35 L 40 15 L 70 35" 
+              fill="none" 
+              stroke="#9ca3af" 
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Base */}
+            <rect x="15" y="35" width="50" height="4" fill="none" stroke="#9ca3af" strokeWidth="2.5"/>
+            {/* Pillars */}
+            <rect x="20" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
+            <rect x="32" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
+            <rect x="44" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
+            <rect x="56" y="39" width="6" height="20" fill="none" stroke="#9ca3af" strokeWidth="2"/>
+            {/* Foundation */}
+            <rect x="15" y="59" width="50" height="6" fill="none" stroke="#9ca3af" strokeWidth="2.5"/>
           </svg>
           <span className="node-label">Bank</span>
           <motion.div className="node-key-display" animate={bankKeyControls}>
