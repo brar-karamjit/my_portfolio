@@ -1,8 +1,48 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import userImage from "../../Assets/user.png";
-import bankImage from "../../Assets/bank.png";
 import "./PingAnimation.css";
+
+const OriginIcon = (props) => (
+  <svg viewBox="0 0 120 120" role="presentation" focusable="false" {...props}>
+    <defs>
+      <linearGradient id="originScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#60a5fa" />
+        <stop offset="100%" stopColor="#2563eb" />
+      </linearGradient>
+      <linearGradient id="originBody" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#0f172a" />
+        <stop offset="100%" stopColor="#1e293b" />
+      </linearGradient>
+    </defs>
+    <rect x="20" y="20" width="80" height="56" rx="10" fill="url(#originBody)" />
+    <rect x="28" y="28" width="64" height="40" rx="6" fill="url(#originScreen)" />
+    <circle cx="60" cy="76" r="3" fill="#94a3b8" />
+    <rect x="44" y="82" width="32" height="8" rx="4" fill="#334155" />
+    <rect x="32" y="94" width="56" height="8" rx="4" fill="#1d4ed8" opacity="0.5" />
+  </svg>
+);
+
+const ServerIcon = (props) => (
+  <svg viewBox="0 0 120 120" role="presentation" focusable="false" {...props}>
+    <defs>
+      <linearGradient id="serverBody" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#0d9488" />
+        <stop offset="100%" stopColor="#14b8a6" />
+      </linearGradient>
+    </defs>
+    <rect x="28" y="20" width="64" height="24" rx="8" fill="url(#serverBody)" />
+    <rect x="28" y="50" width="64" height="24" rx="8" fill="url(#serverBody)" opacity="0.9" />
+    <rect x="28" y="80" width="64" height="24" rx="8" fill="url(#serverBody)" opacity="0.8" />
+    <circle cx="44" cy="32" r="4" fill="#f8fafc" />
+    <circle cx="44" cy="62" r="4" fill="#f8fafc" />
+    <circle cx="44" cy="92" r="4" fill="#f8fafc" />
+    <rect x="54" y="28" width="24" height="6" rx="3" fill="#0f172a" opacity="0.55" />
+    <rect x="54" y="58" width="24" height="6" rx="3" fill="#0f172a" opacity="0.5" />
+    <rect x="54" y="88" width="24" height="6" rx="3" fill="#0f172a" opacity="0.45" />
+    <rect x="30" y="16" width="60" height="6" rx="3" fill="#0f172a" opacity="0.35" />
+    <rect x="30" y="108" width="60" height="6" rx="3" fill="#0f172a" opacity="0.3" />
+  </svg>
+);
 
 const steps = [
   "Origin host wraps an ICMP echo request in an IP packet and launches it across the network.",
@@ -214,7 +254,7 @@ function PingAnimation() {
       <div className="ping-content">
         <h2>ICMP Ping Round Trip</h2>
         <p>
-          Follow an ICMP echo request as it leaves an origin host, touches the destination, and races back as an echo reply to measure latency.
+          Follow an ICMP echo request as it leaves an origin host, reaches the destination, and races back as an echo reply to measure latency.
         </p>
       </div>
 
@@ -226,12 +266,12 @@ function PingAnimation() {
         <div className="ping-track ping-track-bottom" />
 
         <motion.div className="ping-node ping-node-origin" animate={userControls}>
-          <img src={userImage} alt="Origin host" className="ping-node-icon" draggable="false" />
+          <OriginIcon className="ping-node-icon" aria-hidden="true" />
           <span className="ping-node-label">Origin Host</span>
         </motion.div>
 
         <motion.div className="ping-node ping-node-destination" animate={serverControls}>
-          <img src={bankImage} alt="Destination host" className="ping-node-icon" draggable="false" />
+          <ServerIcon className="ping-node-icon" aria-hidden="true" />
           <span className="ping-node-label">Destination Host</span>
         </motion.div>
 

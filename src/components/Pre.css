@@ -9,6 +9,7 @@
   background-image: url(../Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: clamp(140px, 18vw, 220px);
 }
 
 #preloader-none {
