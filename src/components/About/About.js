@@ -18,12 +18,12 @@ function About() {
             <Col md={7} className="about-hero-text">
               <span className="section-eyebrow">About</span>
               <h1 className="about-title">
-                Building resilient platforms with care and curiosity
+                Engineering platforms that scale across cloud and hybrid environments
               </h1>
               <p className="about-subtitle">
-                I'm a DevOps engineer translating business goals into reliable, automated cloud platforms. From
-                infrastructure-as-code to observability, I focus on the systems that keep teams shipping with
-                confidence.
+                I'm a Platform Engineer specializing in DevOps practices, translating business requirements into robust, 
+                automated infrastructure. From multi-cloud orchestration to hybrid deployments, I build the foundation 
+                that enables engineering teams to deliver faster and more reliably.
               </p>
             </Col>
             <Col md={5} className="about-hero-image">
@@ -47,7 +47,7 @@ function About() {
           <p className="section-eyebrow">Journey</p>
           <h2 className="section-title">Experience timeline</h2>
           <p className="section-subtitle about-timeline-subtitle">
-            The roles, milestones, and moments that shaped my approach to cloud, automation, and platform operations.
+            My path through platform engineering, DevOps, and hybrid cloud infrastructure—building systems that bridge on-premises and cloud environments.
           </p>
           <Timeline />
         </Container>

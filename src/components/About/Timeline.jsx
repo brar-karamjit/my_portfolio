@@ -19,7 +19,7 @@ const Timeline = () => {
     {
       year: "2022",
       title: "CGI Inc.",
-      description: "DevOps Engineer Intern focused on CI/CD, configuration management, and early automation initiatives.",
+      description: "DevOps Engineer Intern focused on CI/CD automation, configuration management, and infrastructure provisioning using modern DevOps tooling.",
       icon: "💼",
       iconSrc: cgiMilestoneImg,
       iconAlt: "CGI internship milestone",
@@ -27,7 +27,7 @@ const Timeline = () => {
     {
       year: "2023",
       title: "Questrade",
-      description: "Infrastructure Engineer Intern working on resilient cloud environments and observability instrumentation.",
+      description: "Infrastructure Engineer Intern building resilient cloud platforms, implementing observability solutions, and optimizing hybrid infrastructure deployments.",
       icon: "🚀",
       iconSrc: questradeMilestoneImg,
       iconAlt: "Questrade internship milestone",
@@ -35,7 +35,7 @@ const Timeline = () => {
     {
       year: "2023",
       title: "Questrade",
-      description: "Systems Engineer scaling automation, cloud governance, and platform reliability for cross-functional teams.",
+      description: "Systems Engineer driving platform engineering initiatives, cloud governance, and hybrid infrastructure automation to support enterprise-scale operations.",
       icon: "☁️",
       iconSrc: questradeMilestoneImg,
       iconAlt: "Questrade systems engineer milestone",

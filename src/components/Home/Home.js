@@ -20,7 +20,7 @@ function Home() {
           <Row className="align-items-center home-hero-row">
             <Col md={7} className="home-header home-hero-text">
               <span className="home-hero-badge">
-                Platform Engineer · Cloud &amp; Automation
+                Platform Engineer · Cloud &amp; Hybrid Infrastructure
               </span>
               <h1 className="home-title">
                 Hi there!
@@ -29,7 +29,7 @@ function Home() {
                 I'm <span>Karamjit Brar</span>
               </h2>
               <p className="home-subtitle">
-                I design, automate, and scale resilient infrastructure so teams can ship with confidence and clarity.
+                I build and scale platform infrastructure across cloud and on-premises environments, empowering engineering teams with reliable automation and self-service capabilities.
               </p>
               <div className="home-divider" />
               <div className="home-typewriter">
@@ -52,9 +52,9 @@ function Home() {
 
       <Container className="home-surface home-social-section">
         <p className="section-eyebrow">Let's Connect</p>
-        <h2 className="section-title">Building reliable platforms together</h2>
+        <h2 className="section-title">Building scalable platforms together</h2>
         <p className="section-subtitle">
-          I love collaborating on automation-first infrastructure and sharing ideas with fellow engineers. Reach out anytime.
+          Passionate about platform engineering, hybrid cloud architectures, and DevOps best practices. Let's collaborate on infrastructure that enables teams to innovate faster.
         </p>
         <div className="home-social-links">
           <a
@@ -82,7 +82,7 @@ function Home() {
         <p className="section-eyebrow">Toolkit</p>
         <h2 className="project-heading home-section-heading">Tools and Platforms</h2>
         <p className="section-subtitle">
-          Frameworks and services I rely on to build observable, secure, and scalable systems.
+          Technologies and platforms I leverage to architect, automate, and operate resilient infrastructure across cloud and hybrid environments.
         </p>
         <Techstack />
       </Container>
@@ -91,7 +91,7 @@ function Home() {
         <p className="section-eyebrow">Environments</p>
         <h2 className="project-heading home-section-heading">Operating Systems</h2>
         <p className="section-subtitle">
-          Experience across these operating systems in both cloud-native and on-premises environments.
+          Deep expertise across Linux and Windows ecosystems in cloud-native, hybrid, and on-premises deployments.
         </p>
         <OsStack />
       </Container>
