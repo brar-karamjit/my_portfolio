@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import "./HttpsKeyExchange.css";
 
@@ -17,6 +17,8 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const BOX_POSITION_BANK = 100;
 const BOX_POSITION_USER = -200;
+const USER_GLOW = "rgba(59, 130, 246, 0.45)";
+const BANK_GLOW = "rgba(148, 163, 184, 0.45)";
 
 function HttpsKeyExchange() {
   const userControls = useAnimation();
@@ -31,6 +33,41 @@ function HttpsKeyExchange() {
   const [stepIndex, setStepIndex] = useState(-1);
   const [isPlaying, setIsPlaying] = useState(false);
   const [replayToken, setReplayToken] = useState(0);
+
+  const startIdleLoop = useCallback((controls) => {
+    controls.set({ scale: 1, boxShadow: "0 0 0 rgba(0, 0, 0, 0)" });
+    controls.start({
+      scale: [1, 1.03, 1],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut"
+      }
+    });
+  }, []);
+
+  const pulseNode = useCallback(
+    async (controls, glow) => {
+      controls.stop();
+      controls.set({ scale: 1, boxShadow: "0 0 0 rgba(0, 0, 0, 0)" });
+      await controls.start({
+        scale: [1, 1.06, 1],
+        boxShadow: [
+          "0 0 0 rgba(0, 0, 0, 0)",
+          `0 0 20px ${glow}`,
+          "0 0 0 rgba(0, 0, 0, 0)"
+        ],
+        transition: {
+          duration: 0.5,
+          ease: "easeInOut",
+          times: [0, 0.5, 1]
+        }
+      });
+      startIdleLoop(controls);
+    },
+    [startIdleLoop]
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -57,6 +94,9 @@ function HttpsKeyExchange() {
       userKeyControls.set({ opacity: 0, scale: 0.6, y: 0, filter: "drop-shadow(0 0 12px rgba(59, 130, 246, 0.6))" });
       bankKeyControls.set({ opacity: 0, scale: 0.6, y: 0, filter: "drop-shadow(0 0 12px rgba(59, 130, 246, 0.6))" });
 
+  startIdleLoop(userControls);
+  startIdleLoop(bankControls);
+
       await wait(500);
       if (cancelled) return;
 
@@ -80,7 +120,8 @@ function HttpsKeyExchange() {
           opacity: 1, 
           scale: 1, 
           transition: { type: "spring", stiffness: 200, damping: 20, delay: 0.4 } 
-        })
+        }),
+        pulseNode(bankControls, BANK_GLOW)
       ]);
       if (cancelled) return;
 
@@ -96,6 +137,9 @@ function HttpsKeyExchange() {
           ease: [0, 0, 1, 1] // Perfectly linear cubic bezier
         } 
       });
+      if (cancelled) return;
+
+      await pulseNode(userControls, USER_GLOW);
       if (cancelled) return;
 
       await wait(500);
@@ -126,18 +170,24 @@ function HttpsKeyExchange() {
       });
       if (cancelled) return;
 
+      await pulseNode(bankControls, BANK_GLOW);
+      if (cancelled) return;
+
       await wait(500);
       if (cancelled) return;
 
       // Step 4: Bank removes red lock
       setStepIndex(4);
-      await redLockControls.start({ 
-        opacity: 0, 
-        scale: 0.8,
-        rotate: 25,
-        y: -20,
-        transition: { duration: 0.5, ease: [0.4, 0.0, 0.2, 1] } 
-      });
+      await Promise.all([
+        redLockControls.start({ 
+          opacity: 0, 
+          scale: 0.8,
+          rotate: 25,
+          y: -20,
+          transition: { duration: 0.5, ease: [0.4, 0.0, 0.2, 1] } 
+        }),
+        pulseNode(bankControls, BANK_GLOW)
+      ]);
       if (cancelled) return;
 
       await wait(600);
@@ -175,7 +225,8 @@ function HttpsKeyExchange() {
           scale: 1.3,
           filter: "drop-shadow(0 0 16px rgba(59, 130, 246, 0.8))",
           transition: { type: "spring", stiffness: 180, damping: 15 } 
-        })
+        }),
+        pulseNode(userControls, USER_GLOW)
       ]);
       if (cancelled) return;
 
@@ -199,16 +250,8 @@ function HttpsKeyExchange() {
           filter: "drop-shadow(0 0 20px rgba(59, 130, 246, 0.9))",
           transition: { type: "spring", stiffness: 180, damping: 14, delay: 0.15 } 
         }),
-        userControls.start({ 
-          scale: 1.05,
-          boxShadow: "0 0 32px rgba(59, 130, 246, 0.6), 0 0 64px rgba(59, 130, 246, 0.3)", 
-          transition: { duration: 0.8, ease: "easeInOut" } 
-        }),
-        bankControls.start({ 
-          scale: 1.05,
-          boxShadow: "0 0 32px rgba(156, 163, 175, 0.6), 0 0 64px rgba(156, 163, 175, 0.3)", 
-          transition: { duration: 0.8, ease: "easeInOut" } 
-        })
+        pulseNode(userControls, USER_GLOW),
+        pulseNode(bankControls, BANK_GLOW)
       ]);
       if (cancelled) return;
 
@@ -236,7 +279,9 @@ function HttpsKeyExchange() {
     greenLockControls,
     innerKeyControls,
     userKeyControls,
-    bankKeyControls
+    bankKeyControls,
+    startIdleLoop,
+    pulseNode
   ]);
 
   const handleReplay = () => {
