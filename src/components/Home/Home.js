@@ -29,7 +29,7 @@ function Home() {
                 I'm <span>Karamjit Brar</span>
               </h2>
               <p className="home-subtitle">
-                I build and scale platform infrastructure across cloud and on-premises environments, empowering engineering teams with reliable automation and self-service capabilities.
+                I build and scale platform infrastructure across cloud and on-prem environments, empowering engineering teams with reliable automation and self-service capabilities.
               </p>
               <div className="home-divider" />
               <div className="home-typewriter">
