@@ -95,6 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
 .box-key {
@@ -107,19 +108,17 @@
 
 .lock {
   position: absolute;
-  top: -28px;
-  font-size: 1.5rem;
+  top: -36px;
   opacity: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .lock-red {
-  left: 14px;
-  color: #ef4444;
+  left: 10px;
 }
 
 .lock-green {
-  right: 14px;
-  color: #22c55e;
+  right: 10px;
 }
 
 .https-controls {

@@ -3,14 +3,14 @@ import { motion, useAnimation } from "framer-motion";
 import "./HttpsKeyExchange.css";
 
 const steps = [
-  "Bank sends a locked case with a blue key inside. The red lock keeps it secure.",
-  "User receives the locked box from the bank.",
-  "User adds a second lock to the box using a fresh green padlock.",
-  "User sends the double-locked box back to the bank.",
-  "Bank removes its red lock and returns the box with the green lock still attached.",
-  "User receives the box that now only has the green lock.",
-  "User unlocks the green lock and reveals the blue key.",
-  "Bank and user both keep matching blue keys for secure messages."
+  "Bank sends a box with a Blue key inside and a Red lock on top.",
+  "User receives the box from the Bank.",
+  "User adds a Green lock to the box (now two locks).",
+  "User sends the box back to the Bank.",
+  "Bank removes the Red lock and sends the box back with the Green lock still on it.",
+  "User receives the box with only the Green lock.",
+  "User removes the Green lock and retrieves the Blue key.",
+  "Both Bank and User now have a copy of the Blue key."
 ];
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -167,12 +167,30 @@ function HttpsKeyExchange() {
             <motion.span className="box-key" animate={innerKeyControls} role="img" aria-label="Blue key inside box">
               🔑
             </motion.span>
-            <motion.span className="lock lock-red" animate={redLockControls} role="img" aria-label="Red padlock">
-              🔒
-            </motion.span>
-            <motion.span className="lock lock-green" animate={greenLockControls} role="img" aria-label="Green padlock">
-              �
-            </motion.span>
+            <motion.svg
+              className="lock lock-red"
+              animate={redLockControls}
+              width="28"
+              height="34"
+              viewBox="0 0 28 34"
+              aria-label="Red lock"
+            >
+              <rect x="2" y="14" width="24" height="18" rx="4" fill="#991b1b" stroke="#7f1d1d" strokeWidth="2" />
+              <path d="M8 14 V9 A6 6 0 0 1 20 9 V14" stroke="#7f1d1d" strokeWidth="3" fill="none" strokeLinecap="round" />
+              <rect x="12" y="20" width="4" height="6" rx="1" fill="rgba(0, 0, 0, 0.3)" />
+            </motion.svg>
+            <motion.svg
+              className="lock lock-green"
+              animate={greenLockControls}
+              width="28"
+              height="34"
+              viewBox="0 0 28 34"
+              aria-label="Green lock"
+            >
+              <rect x="2" y="14" width="24" height="18" rx="4" fill="#22c55e" stroke="#16a34a" strokeWidth="2" />
+              <path d="M8 14 V9 A6 6 0 0 1 20 9 V14" stroke="#16a34a" strokeWidth="3" fill="none" strokeLinecap="round" />
+              <rect x="12" y="20" width="4" height="6" rx="1" fill="rgba(0, 0, 0, 0.3)" />
+            </motion.svg>
           </div>
         </motion.div>
       </div>
