@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Particle from "../Particle";
 import "./Animations.css";
@@ -39,29 +39,27 @@ function Blog() {
           Each post is a visual walkthrough designed to make platform concepts memorable—watch packets move, pipelines evolve, and reliability patterns come alive.
         </p>
         <p className="section-eyebrow">Latest Posts</p>
-        <Row className="g-4 blog-post-row">
+        <div className="blog-card-grid">
           {blogPosts.map((post) => (
-            <Col md={6} key={post.id} className="blog-card-col">
-              <Card as={Link} to={post.path} className="blog-card">
-                <Card.Body>
-                  <div className="blog-card-meta">
-                    <span className="blog-card-topic">{post.topic}</span>
-                    <span className="blog-card-time">{post.readingTime}</span>
-                  </div>
-                  <Card.Title className="blog-card-title">{post.title}</Card.Title>
-                  <Card.Text className="blog-card-summary">{post.summary}</Card.Text>
-                  <div className="blog-card-tags">
-                    {post.tags.map((tag) => (
-                      <span key={tag} className="blog-card-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
+            <Card as={Link} to={post.path} key={post.id} className="blog-card">
+              <Card.Body>
+                <div className="blog-card-meta">
+                  <span className="blog-card-topic">{post.topic}</span>
+                  <span className="blog-card-time">{post.readingTime}</span>
+                </div>
+                <Card.Title className="blog-card-title">{post.title}</Card.Title>
+                <Card.Text className="blog-card-summary">{post.summary}</Card.Text>
+                <div className="blog-card-tags">
+                  {post.tags.map((tag) => (
+                    <span key={tag} className="blog-card-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Card.Body>
+            </Card>
           ))}
-        </Row>
+        </div>
       </Container>
     </section>
   );
