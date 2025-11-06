@@ -38,7 +38,7 @@ function Blog() {
         <p className="blog-subheading">
           Each post is a visual walkthrough designed to make platform concepts memorable—watch packets move, pipelines evolve, and reliability patterns come alive.
         </p>
-        <p className="section-eyebrow">Latest posts</p>
+        <p className="section-eyebrow">Latest Posts</p>
         <Row className="g-4 blog-post-row">
           {blogPosts.map((post) => (
             <Col md={6} key={post.id} className="blog-card-col">
