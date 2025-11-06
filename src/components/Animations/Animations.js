@@ -36,7 +36,7 @@ function Blog() {
         <p className="section-eyebrow">Welcome</p>
         <h1 className="blog-heading">Stories that animate DevOps fundamentals</h1>
         <p className="blog-subheading">
-          Each post is a short, visual walkthrough designed to make platform concepts memorable—watch packets move, pipelines evolve, and reliability patterns come alive.
+          Each post is a visual walkthrough designed to make platform concepts memorable—watch packets move, pipelines evolve, and reliability patterns come alive.
         </p>
         <p className="section-eyebrow">Latest entries</p>
         <Row className="g-4 blog-post-row">
