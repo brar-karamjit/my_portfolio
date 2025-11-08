@@ -29,7 +29,7 @@ function Home() {
                 I'm <span>Karamjit Brar</span>
               </h2>
               <p className="home-subtitle">
-                I build, scale and maintain automation pipelines, infrastructure across cloud and on-premise environments, empowering engineering teams with reliable automation and self-service capabilities.
+                I build, scale and maintain automation pipelines for infrastructure across cloud and on-premise environments, empowering engineering teams with reliable systems and self-service capabilities.
               </p>
               <div className="home-divider" />
               <div className="home-typewriter">
