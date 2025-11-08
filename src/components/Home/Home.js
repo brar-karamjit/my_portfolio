@@ -54,7 +54,7 @@ function Home() {
         <p className="section-eyebrow">Let's Connect</p>
         <h2 className="section-title">Building scalable platforms together</h2>
         <p className="section-subtitle">
-          Passionate about platform engineering, hybrid cloud architectures, and DevOps best practices. Let's collaborate on infrastructure that enables teams to innovate faster.
+          Passionate about platform engineering, hybrid cloud architectures, and DevOps best practices. Let's collaborate on projects that enables teams to innovate faster.
         </p>
         <div className="home-social-links">
           <a
