@@ -22,12 +22,12 @@ function Home() {
               <span className="home-hero-badge">
                 Platform Engineer · Cloud &amp; Hybrid Infrastructure
               </span>
-              <h1 className="home-title">
+              <h2 className="home-title">
                 Hi there!
-              </h1>
-              <h2 className="home-name">
-                I'm <span>Karamjit Brar</span>
               </h2>
+              <h1 className="home-name">
+                I'm <span>Karamjit Brar</span>
+              </h1>
               <p className="home-subtitle">
                 I build, scale and maintain automation pipelines for infrastructure across cloud and on-premise environments, empowering engineering teams with reliable systems and self-service capabilities.
               </p>
