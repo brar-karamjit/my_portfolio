@@ -17,7 +17,7 @@ const projects = [
     imgPath: momentImg,
     ghLink: "https://github.com/brar-karamjit/MomentInMotion",
     demoLink: "https://moment-in-motion.web.app/",
-    tags: ["Django", "OpenWeather API", "Gemini", "Tailwind"],
+    tags: ["Django", "AI", "Gemini", "Kubernetes"],
   },
   {
     title: "Inventory Manager",
