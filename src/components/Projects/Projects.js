@@ -25,8 +25,8 @@ const projects = [
       "Role-based inventory operations with audit trails, low-stock automation, and customizable dashboards for fast-moving product teams.",
     imgPath: inventoryImg,
     ghLink: "https://github.com/brar-karamjit/inventory_manager",
-    demoLink: null,
-    tags: ["Django", "PostgreSQL", "Docker", "CI/CD"],
+    demoLink: "https://hub.docker.com/repository/docker/karamjitbrar/inventory_manager",
+    tags: ["Django", "CRUD", "Docker", "CI/CD"],
   },
   {
     title: "Portfolio Platform",
@@ -35,7 +35,7 @@ const projects = [
     imgPath: portfolioImg,
     ghLink: "https://github.com/brar-karamjit/my_portfolio",
     demoLink: "https://karamjitbrar.com/",
-    tags: ["React", "Vercel", "Framer Motion", "Design Systems"],
+    tags: ["React", "Vercel", "Framer Motion", "Portfolio"],
   },
 ];
 
