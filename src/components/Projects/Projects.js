@@ -13,7 +13,7 @@ const projects = [
   {
     title: "MomentInMotion",
     description:
-      "Personalized activity recommendations that blend weather insights, location signals, and generative AI to keep days meaningful and memorable.",
+      "Personalized activity recommendations to enhance daily experiences, using location, weather, and generative AI to keep days meaningful and memorable.",
     imgPath: momentImg,
     ghLink: "https://github.com/brar-karamjit/MomentInMotion",
     demoLink: "https://moment-in-motion.web.app/",
