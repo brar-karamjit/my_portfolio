@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Aboutcard from "./AboutCard";
 import Timeline from "./Timeline";
 import gradImg from "../../Assets/grad.jpeg";
+import HobbiesCard from "./HobbiesCard";
 
 import "../Home/Home.css";
 import "./About.css";
@@ -40,6 +41,10 @@ function About() {
 
         <Container className="about-story about-surface home-surface">
           <Aboutcard />
+        </Container>
+
+        <Container className="about-story about-surface home-surface">
+          <HobbiesCard />
         </Container>
 
         <Container className="about-timeline about-surface home-surface">
