@@ -47,18 +47,21 @@ function AboutCard() {
           <span className="about-card-fact-value">Toronto, Canada</span>
         </div>
       </div>
-      <div className="about-card-hobbies">
-        <span className="about-card-hobbies-label">Interests and Hobbies</span>
-        <div className="about-card-interest-grid">
-          {interests.map(({ title, icon, label }) => (
-            <div className="about-card-interest" key={title}>
-              <span className="about-card-interest-icon" role="img" aria-label={label}>
-                {icon}
-              </span>
-              <span className="about-card-interest-title">{title}</span>
-            </div>
-          ))}
+      <div className="about-card-interests">
+        <div className="about-card-hobbies">
+          <span className="about-card-hobbies-label">Interests and Hobbies</span>
+          <div className="about-card-interest-grid">
+            {interests.map(({ title, icon, label }) => (
+              <div className="about-card-interest" key={title}>
+                <span className="about-card-interest-icon" role="img" aria-label={label}>
+                  {icon}
+                </span>
+                <span className="about-card-interest-title">{title}</span>
+              </div>
+            ))}
+          </div>
         </div>
+      
       </div>
     </div>
   );

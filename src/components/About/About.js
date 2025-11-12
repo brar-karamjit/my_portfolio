@@ -16,7 +16,6 @@ function About() {
         <Container className="about-hero">
           <Row className="align-items-center about-hero-row">
             <Col md={7} className="about-hero-text">
-              <span className="section-eyebrow">About</span>
               <h1 className="about-title">
                 Engineering platforms that scale across cloud and hybrid environments
               </h1>
