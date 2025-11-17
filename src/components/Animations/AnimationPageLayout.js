@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Particle from "../Particle";
-import "./Animations.css";
+import "../Blog/Blog.css";
 
 function AnimationPageLayout({ children }) {
   return (
