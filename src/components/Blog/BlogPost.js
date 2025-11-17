@@ -3,7 +3,6 @@ import { Container, Spinner } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Particle from "../Particle";
 import { getBlogPost } from "../../utils/blog";
 import "./Blog.css";
 
@@ -149,8 +148,7 @@ function BlogPost() {
 
   return (
     <section className="blog-post-page">
-      <Particle />
-      <Container className="blog-post-container home-surface">
+      <Container className="blog-post-container">
         {renderContent()}
         <footer className="blog-post-footer">
           <Link to="/blog" className="blog-back-link">

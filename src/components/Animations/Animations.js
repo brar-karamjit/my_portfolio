@@ -6,7 +6,7 @@ export const interactivePosts = [
       "See the TLS handshake unfold step-by-step to demystify how secure sessions begin.",
     tags: ["Security", "Networking"],
     topic: "Zero Trust Foundations",
-  readingTime: "6 min watch",
+    readingTime: "6 min watch",
     path: "/blog/https-key-exchange"
   },
   {
@@ -16,7 +16,7 @@ export const interactivePosts = [
       "Follow an animated packet trace to learn how everyday connectivity checks succeed or fail.",
     tags: ["Diagnostics", "Networking"],
     topic: "Day-2 Operations",
-  readingTime: "5 min watch",
+    readingTime: "5 min watch",
     path: "/blog/icmp-ping"
   }
 ];
