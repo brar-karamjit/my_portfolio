@@ -109,10 +109,8 @@ function BlogIndex() {
 
       <Container className="blog-posts home-surface">
         <p className="section-eyebrow">Welcome</p>
-        <h1 className="blog-heading">Stories that animate platform engineering</h1>
-        <p className="blog-subheading">
-          Write markdown files, drop them into <code>src/content/blog</code>, and this feed will keep itself up to date. No more wiring new routes by hand.
-        </p>
+        <h1 className="blog-heading">Stories of platform engineering</h1>
+        
 
         {renderStatus()}
 

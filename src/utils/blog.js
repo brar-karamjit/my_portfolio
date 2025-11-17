@@ -1,20 +1,15 @@
 import { parse as parseYaml } from "yaml";
 
-const markdownContext = safeRequireContext();
+let markdownContext = null;
+
+try {
+  markdownContext = require.context("../content/blog", false, /\.md$/);
+} catch (_err) {
+  markdownContext = null;
+}
+
 const contextKeys = markdownContext ? markdownContext.keys() : [];
 const postCache = new Map();
-
-function safeRequireContext() {
-  if (typeof require === "undefined" || typeof require.context !== "function") {
-    return null;
-  }
-
-  try {
-    return require.context("../content/blog", false, /\.md$/);
-  } catch (_err) {
-    return null;
-  }
-}
 
 function keyToSlug(key) {
   return key.replace(/^\.\//, "").replace(/\.md$/, "");
