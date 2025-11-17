@@ -3,7 +3,7 @@ import "./About.css";
 
 const interests = [
   {
-    title: "Playing story-driven games",
+    title: "Playing ps5 games",
     icon: "🎮",
     label: "Game controller emoji",
   },

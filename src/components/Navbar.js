@@ -12,6 +12,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { SiKubernetes } from "react-icons/si";
 import "./Navbar.css";
 
 function NavBar() {
@@ -148,6 +149,17 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineBook style={{ marginBottom: "2px" }} /> Blog
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                href="https://k8s.karamjitbrar.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => updateExpanded(false)}
+              >
+                <SiKubernetes style={{ marginBottom: "2px" }} /> K8 Lab
               </Nav.Link>
             </Nav.Item>
           </Nav>
