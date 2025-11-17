@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Container, Card, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Particle from "../Particle";
-import { interactivePosts } from "../Animations/Animations";
 import { listBlogPosts } from "../../utils/blog";
 import "./Blog.css";
 
@@ -149,29 +148,6 @@ function BlogIndex() {
             </div>
           </>
         )}
-
-        <p className="section-eyebrow">Interactive Labs</p>
-        <div className="blog-card-grid">
-          {interactivePosts.map((post) => (
-            <Card as={Link} to={post.path} key={post.id} className="blog-card">
-              <Card.Body>
-                <div className="blog-card-meta">
-                  <span className="blog-card-topic">{post.topic}</span>
-                  <span className="blog-card-time">{post.readingTime}</span>
-                </div>
-                <Card.Title className="blog-card-title">{post.title}</Card.Title>
-                <Card.Text className="blog-card-summary">{post.summary}</Card.Text>
-                <div className="blog-card-tags">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="blog-card-tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
       </Container>
     </section>
   );
