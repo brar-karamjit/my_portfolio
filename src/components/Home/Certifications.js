@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import awsSa from "../../Assets/aws-certified-solutions-architect.png";
 import awsDev from "../../Assets/aws-developer.png";
@@ -29,38 +29,40 @@ function Certifications() {
   ];
 
   return (
-  
-      <Container>
-        <h2 className="project-heading home-section-heading">Certifications</h2>
-        <p className="section-subtitle">
-          Certifications that back up my experience leading automation, platform engineering, and SRE initiatives.
-        </p>
-        <Row className="g-4 justify-content-center">
-          {certifications.map((cert) => (
-            <Col key={cert.title} xs={12} sm={6} lg={4} className="cert-avatar">
-              <Tilt
-                className="cert-tilt"
-                tiltMaxAngleX={10}
-                tiltMaxAngleY={10}
-                glareEnable
-                glareMaxOpacity={0.2}
-                scale={1.02}
-                transitionSpeed={2000}
-              >
-                <div className="cert-card">
-                  <img src={cert.image} alt={cert.title} className="cert-img" />
-                  <div className="cert-card-meta">
-                    <h3 className="cert-card-title">{cert.title}</h3>
-                    <p className="cert-card-issuer">{cert.issuedBy}</p>
-                    <span className="cert-card-year">{cert.date}</span>
-                  </div>
+    <>
+      <p className="section-eyebrow">Validation</p>
+      <h2 className="project-heading home-section-heading">Certifications</h2>
+      <p className="section-subtitle">
+        Certifications that back up my experience leading automation, platform engineering, and SRE initiatives.
+      </p>
+      <Row className="g-4 justify-content-center">
+        {certifications.map((cert) => (
+          <Col key={cert.title} xs={12} sm={6} lg={4} className="cert-avatar">
+            <Tilt
+              className="cert-tilt"
+              tiltMaxAngleX={5}
+              tiltMaxAngleY={5}
+              glareEnable
+              glareMaxOpacity={0.15}
+              scale={1.02}
+              transitionSpeed={2000}
+              perspective={1000}
+            >
+              <div className="cert-card">
+                <img src={cert.image} alt={cert.title} className="cert-img" />
+                <div className="cert-card-meta">
+                  <h3 className="cert-card-title">{cert.title}</h3>
+                  <p className="cert-card-issuer">{cert.issuedBy}</p>
+                  <span className="cert-card-year">{cert.date}</span>
                 </div>
-              </Tilt>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+              </div>
+            </Tilt>
+          </Col>
+        ))}
+      </Row>
+    </>
   );
 }
 
 export default Certifications;
+
