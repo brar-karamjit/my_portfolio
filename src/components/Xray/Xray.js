@@ -63,22 +63,24 @@ function Xray() {
     const handleKeyDown = (e) => {
       // Avoid triggering if user is typing in an input
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
-      
-      if (e.code === 'Space') {
-        // Prevent scrolling when holding space
-        if (!e.repeat) {
-           // optional: e.preventDefault(); 
-           // But preventing default on space might stop scrolling if the user just taps it. 
-           // We only want to activate on hold. 
-           // Let's just activate.
+
+      // Activate on holding the 'x' key (case-insensitive)
+      try {
+        if ((e.key && e.key.toLowerCase() === 'x') || e.code === 'KeyX') {
+          setIsActive(true);
         }
-        setIsActive(true);
+      } catch (err) {
+        // Fallback: do nothing on unexpected event shapes
       }
     };
 
     const handleKeyUp = (e) => {
-      if (e.code === 'Space') {
-        setIsActive(false);
+      try {
+        if ((e.key && e.key.toLowerCase() === 'x') || e.code === 'KeyX') {
+          setIsActive(false);
+        }
+      } catch (err) {
+        // ignore
       }
     };
 
@@ -111,9 +113,9 @@ function Xray() {
         onMouseLeave={() => setIsActive(false)}
         onTouchStart={() => setIsActive(true)}
         onTouchEnd={() => setIsActive(false)}
-        title="Hold 'Spacebar' or click and hold"
+        title="Hold 'X' key or click and hold"
       >
-        X-RAY (Hold Spacebar)
+        X-RAY (Hold X)
       </button>
     </>
   );
