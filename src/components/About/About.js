@@ -79,8 +79,8 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="section-eyebrow">Journey</p>
-            <h2 className="section-title">Experience timeline</h2>
+            
+            <h2 className="section-title">Experience</h2>
             <p className="section-subtitle about-timeline-subtitle">
               My path through platform engineering, DevOps, and hybrid cloud infrastructure—building systems that bridge on-premises and cloud environments.
             </p>

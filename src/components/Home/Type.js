@@ -8,7 +8,6 @@ function Type() {
         strings: [
           "Platform Engineer",
           "DevOps Engineer",
-          "Cloud & Hybrid Infrastructure Specialist",
           "Site Reliability Engineer",
           "Astronomy nerd",
         ],

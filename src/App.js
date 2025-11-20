@@ -18,6 +18,7 @@ import {
   Navigate
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import Xray from "./components/Xray/Xray";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -54,6 +55,7 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
+        <Xray />
         <main className="app-main">
           <Routes>
             <Route path="/" element={<Home />} />

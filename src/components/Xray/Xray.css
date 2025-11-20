@@ -1,0 +1,116 @@
+.xray-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999999;
+  padding: 12px 24px;
+  
+  /* Match website theme (Violet accent) */
+  background: rgba(20, 22, 35, 0.8);
+  color: #c4b5fd; /* --home-accent-light */
+  border: 1px solid #8b5cf6; /* --home-accent */
+  border-radius: 50px;
+  
+  font-family: "Outfit", "Inter", sans-serif; /* --home-heading-font */
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.xray-button:hover {
+  background: #8b5cf6; /* --home-accent */
+  color: white;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+.xray-button:active {
+  transform: scale(0.95);
+}
+
+/* The Matrix X-Ray Effect */
+html.xray-active,
+body.xray-active {
+  background-color: #000 !important;
+  background-image: none !important;
+  overflow-x: hidden; /* Prevent horizontal scrollbars from appearing due to outlines */
+}
+
+/* Force all containers to be transparent so the black background shows */
+body.xray-active .App,
+body.xray-active .App-header,
+body.xray-active .home-section,
+body.xray-active .home-surface,
+body.xray-active .footer,
+body.xray-active .navbar,
+body.xray-active section,
+body.xray-active div,
+body.xray-active span,
+body.xray-active p,
+body.xray-active h1, body.xray-active h2, body.xray-active h3, body.xray-active h4, body.xray-active h5, body.xray-active h6 {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Apply the Matrix Green look */
+body.xray-active * {
+  color: #0f0 !important;
+  text-shadow: 0 0 2px #0f0 !important;
+  border-color: #0f0 !important;
+  outline: 1px solid rgba(0, 255, 0, 0.3) !important;
+}
+
+/* Specific overrides for visibility */
+body.xray-active img,
+body.xray-active svg,
+body.xray-active video,
+body.xray-active canvas,
+body.xray-active .img-fluid {
+  filter: grayscale(100%) brightness(0.8) sepia(1) hue-rotate(50deg) saturate(5) !important;
+  opacity: 0.8 !important;
+  outline: 1px solid #0f0 !important;
+  background: transparent !important;
+}
+
+/* Ensure the button itself remains visible and usable in its original style or a matrix style? 
+   User said "activates when uses holds x key... changes background and everything to sort of matrix green"
+   Usually the button should probably also turn green to match the mode, or stay distinct.
+   Let's make it turn green to match the mode.
+*/
+body.xray-active .xray-button {
+  background-color: #000 !important;
+  color: #0f0 !important;
+  border-color: #0f0 !important;
+  box-shadow: 0 0 20px #0f0 !important;
+  text-shadow: 0 0 5px #0f0 !important;
+}
+
+.xray-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* High z-index to sit on top of content */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.xray-active .xray-canvas {
+  opacity: 1;
+  /* Ensure canvas itself isn't affected by the generic * selector filters if possible, 
+     but the * selector targets children of body. Canvas is a child of body (via React portal or just in App).
+     We need to override the generic filters for the canvas if they mess it up.
+  */
+  filter: none !important;
+  outline: none !important;
+}
+
