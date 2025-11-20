@@ -1,25 +1,13 @@
 .about-section {
   position: relative;
-  padding: 120px 0 80px;
+  padding-top: 120px !important;
+  padding-bottom: 100px !important;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.08), transparent 25%), 
+    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+  background-color: var(--home-bg);
   color: var(--home-text-primary);
-  background:
-    radial-gradient(circle at 10% 20%, rgba(79, 224, 195, 0.08), transparent 50%),
-    radial-gradient(circle at 90% 10%, rgba(100, 149, 237, 0.12), transparent 55%),
-    linear-gradient(135deg, var(--home-bg) 0%, #091025 40%, var(--home-bg-alt) 100%);
-}
-
-.about-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 120%, rgba(79, 224, 195, 0.05), transparent 60%);
-  opacity: 0.8;
-  z-index: 0;
-}
-
-.about-section > * {
-  position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .about-hero {
@@ -37,16 +25,17 @@
 .about-title {
   font-family: var(--home-heading-font);
   font-size: clamp(2.2rem, 4vw, 3.1rem);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--home-text-primary);
+  letter-spacing: -0.02em;
 }
 
 .about-subtitle {
   font-size: clamp(1rem, 1.4vw, 1.2rem);
-  line-height: 1.9;
-  color: var(--home-text-muted);
-  max-width: 560px;
+  line-height: 1.8;
+  color: var(--home-text-secondary);
+  max-width: 600px;
   margin-bottom: 0;
 }
 
@@ -60,258 +49,224 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  border-radius: 32px;
-  background: rgba(6, 14, 32, 0.68);
-  border: 1px solid rgba(100, 255, 218, 0.12);
-  box-shadow: 0 28px 70px rgba(3, 10, 30, 0.55);
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid var(--home-border);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   overflow: hidden;
-}
-
-.about-hero-image-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: -30% -20% 60% -20%;
-  background: radial-gradient(circle, rgba(79, 224, 195, 0.25), transparent 65%);
-  opacity: 0.6;
 }
 
 .about-hero-illustration {
   position: relative;
   z-index: 1;
   width: 100%;
-  border-radius: 26px;
+  border-radius: 20px;
   object-fit: cover;
-  filter: saturate(1.05) contrast(1.05) drop-shadow(0 18px 40px rgba(5, 10, 30, 0.45));
-}
-
-.about-hero-image-glow {
-  position: absolute;
-  inset: auto;
-  width: 70%;
-  height: 40%;
-  bottom: -20%;
-  border-radius: 100%;
-  background: radial-gradient(circle, rgba(100, 255, 218, 0.15), transparent 70%);
-  filter: blur(40px);
+  filter: saturate(1.1) contrast(1.1);
 }
 
 .about-surface {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 24px;
+  background: var(--home-surface);
+  border: 1px solid var(--home-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
 }
 
 .about-card {
   display: grid;
-  gap: 1.8rem;
+  gap: 2rem;
 }
 
 .about-card-lead {
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-  line-height: 1.9;
+  line-height: 1.8;
   color: var(--home-text-primary);
 }
 
 .about-card-body {
   font-size: clamp(1rem, 1.3vw, 1.15rem);
-  line-height: 1.9;
-  color: var(--home-text-muted);
+  line-height: 1.8;
+  color: var(--home-text-secondary);
 }
 
 .about-highlight {
-  color: var(--home-accent-light);
+  color: var(--home-accent);
+  font-weight: 600;
 }
 
 .about-card-facts {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
 }
 
 .about-card-fact {
-  padding: 1rem 1.2rem;
-  border-radius: 18px;
-  background: rgba(6, 14, 32, 0.6);
-  border: 1px solid rgba(100, 255, 218, 0.12);
-  box-shadow: 0 18px 40px rgba(5, 12, 26, 0.35);
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--home-border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-card-fact:hover {
+  transform: translateY(-5px);
+  border-color: var(--home-accent);
 }
 
 .about-card-fact-label {
   display: block;
   font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--home-accent);
-  margin-bottom: 0.35rem;
+  color: var(--home-accent-light);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .about-card-fact-value {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--home-text-primary);
+  font-weight: 600;
 }
 
-.about-card-hobbies {
-  padding-top: 0.5rem;
-}
-
+/* Hobbies */
 .about-card-hobbies-label {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--home-accent);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .about-card-interest-grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.hobby-tilt {
+  height: 100%;
 }
 
 .about-card-interest {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  padding: 1.1rem 1.2rem;
-  border-radius: 18px;
-  background: rgba(6, 14, 32, 0.6);
-  border: 1px solid rgba(100, 255, 218, 0.12);
-  box-shadow: 0 18px 40px rgba(5, 12, 26, 0.35);
-  color: var(--home-text-muted);
-}
-
-.about-card-interest-icon {
-  font-size: 1.8rem;
-}
-
-.about-card-interest-title {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--home-text-primary);
-}
-
-.about-timeline-subtitle {
-  max-width: 640px;
-}
-
-
-.timeline-track {
   position: relative;
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.timeline-track::before {
-  content: none;
-}
-
-.timeline-item {
-  display: flex;
-  align-items: stretch;
-  gap: 1.75rem;
-  max-width: 880px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.timeline-marker {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  height: 100%;
+  min-height: 220px;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  z-index: 1;
 }
 
-.timeline-marker-node {
-  display: none;
+.about-card-interest:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
 }
 
-.timeline-icon {
-  display: grid;
-  place-items: center;
-  width: 92px;
-  height: 92px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(4px);
+.hobby-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
 }
 
-.timeline-icon > span[role="img"] {
-  font-size: 2.2rem;
+.about-card-interest-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.timeline-icon img {
+.about-card-interest:hover .about-card-interest-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.about-card-interest-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--home-text-primary);
+  margin: 0;
+}
+
+.about-card-interest-desc {
+  font-size: 0.9rem;
+  color: var(--home-text-secondary);
+  margin: 0;
+  opacity: 0.8;
+}
+
+.hobby-bg-icon {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 8rem;
+  opacity: 0.05;
+  transform: rotate(-15deg);
+  transition: all 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-card-interest:hover .hobby-bg-icon {
+  transform: rotate(0deg) scale(1.2);
+  opacity: 0.1;
+  bottom: -10px;
+  right: -10px;
+}
+
+.hobby-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 8px;
-  border-radius: 12px;
-  box-shadow: 0 10px 24px rgba(3, 10, 30, 0.45);
+  background: radial-gradient(circle at center, var(--home-accent-glow), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.timeline-content {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1.5rem 2rem;
-  border-radius: 22px;
-  background: rgba(6, 14, 32, 0.62);
-  border: 1px solid rgba(100, 255, 218, 0.1);
-  box-shadow: 0 24px 50px rgba(3, 10, 30, 0.45);
-  max-width: 680px;
-  width: 100%;
-  text-align: left;
+.about-card-interest:hover .hobby-glow {
+  opacity: 0.6;
 }
 
-.timeline-year {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  color: var(--home-accent);
-  text-transform: uppercase;
-}
-
-.timeline-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--home-text-primary);
-}
-
-.timeline-description {
-  color: var(--home-text-muted);
-  line-height: 1.7;
-}
-
-.about-github-subtitle {
-  max-width: 620px;
-}
-
-.github-calendar-wrapper {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 22px;
-  background: rgba(6, 14, 32, 0.62);
-  border: 1px solid rgba(100, 255, 218, 0.1);
-  box-shadow: 0 24px 50px rgba(3, 10, 30, 0.45);
-  overflow-x: auto;
+.about-timeline-subtitle {
+  max-width: 640px;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 991px) {
   .about-hero-text {
     padding-right: 0;
     text-align: center;
+    margin-bottom: 3rem;
   }
 
   .about-subtitle {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .about-hero-image {
-    padding-top: 1rem;
   }
 
   .about-card {
@@ -320,52 +275,5 @@
 
   .about-card-facts {
     justify-items: center;
-  }
-
-  .about-card-interest {
-    align-items: center;
-    text-align: center;
-  }
-
-  .timeline-track::before {
-    content: none;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.4rem;
-    margin: 0 auto;
-  }
-
-  .timeline-icon {
-    width: 88px;
-    height: 88px;
-    border-radius: 14px;
-  }
-
-  .timeline-marker {
-    justify-content: center;
-  }
-
-  .timeline-content {
-    max-width: 100%;
-    padding: 1.3rem 1.6rem;
-    text-align: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .about-section {
-    padding-top: 90px;
-  }
-
-  .timeline-content {
-    padding: 1rem 1.2rem;
-  }
-
-  .github-calendar-wrapper {
-    padding: 1rem;
   }
 }

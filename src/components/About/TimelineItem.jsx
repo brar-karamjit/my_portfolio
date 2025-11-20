@@ -4,8 +4,7 @@ const TimelineItem = ({ year, title, description, icon, iconSrc, iconAlt }) => {
   return (
     <div className="timeline-item">
       <div className="timeline-marker" aria-hidden="true">
-        <span className="timeline-marker-node" />
-        <span className="timeline-icon">
+        <div className="timeline-icon">
           {iconSrc ? (
             <img src={iconSrc} alt={iconAlt || "Timeline milestone"} />
           ) : (
@@ -13,7 +12,7 @@ const TimelineItem = ({ year, title, description, icon, iconSrc, iconAlt }) => {
               {icon || "💡"}
             </span>
           )}
-        </span>
+        </div>
       </div>
       <div className="timeline-content">
         <span className="timeline-year">{year}</span>
