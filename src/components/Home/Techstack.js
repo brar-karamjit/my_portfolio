@@ -78,7 +78,7 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiSaltproject fontSize={"24px"} />
+        <SiSaltproject />
         <div className="tech-icons-text">SaltStack</div>
       </Col>
 
@@ -93,7 +93,7 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <SiSplunk fontSize={"24px"} />
+        <SiSplunk />
         <div className="tech-icons-text">Splunk</div>
       </Col>
 

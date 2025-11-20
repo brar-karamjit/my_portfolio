@@ -15,6 +15,9 @@ function Particle() {
               value_area: 1500,
             },
           },
+          color: {
+            value: "#ffffff",
+          },
           line_linked: {
             enable: false,
             opacity: 0.03,

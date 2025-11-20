@@ -24,23 +24,54 @@ function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <span className="home-hero-badge">
+                <motion.span 
+                  className="home-hero-badge"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1, duration: 0.5 }}
+                >
                   Platform Engineer · Cloud &amp; Hybrid Infrastructure
-                </span>
-                <h2 className="home-title">
+                </motion.span>
+                <motion.h2 
+                  className="home-title"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                >
                   Hi there!
-                </h2>
-                <h1 className="home-name">
+                </motion.h2>
+                <motion.h1 
+                  className="home-name"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
                   I'm <span className="main-name">Karamjit Brar</span>
-                </h1>
-                <p className="home-subtitle">
+                </motion.h1>
+                <motion.p 
+                  className="home-subtitle"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                >
                   I build, scale and maintain automation for infrastructure across cloud and on-premise environments, empowering engineering teams with reliable systems and self-service capabilities.
-                </p>
-                <div className="home-divider" />
-                <div className="home-typewriter">
+                </motion.p>
+                <motion.div 
+                  className="home-divider" 
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.5, duration: 0.6, ease: "circOut" }}
+                  style={{ originX: 0 }}
+                />
+                <motion.div 
+                  className="home-typewriter"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                >
                   <Type />
                   <span className="home-typewriter-label"></span>
-                </div>
+                </motion.div>
               </motion.div>
             </Col>
 
