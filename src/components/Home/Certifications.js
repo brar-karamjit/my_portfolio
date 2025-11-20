@@ -30,7 +30,6 @@ function Certifications() {
 
   return (
     <>
-      <p className="section-eyebrow">Validation</p>
       <h2 className="project-heading home-section-heading">Certifications</h2>
       <p className="section-subtitle">
         Certifications that back up my experience leading automation, platform engineering, and SRE initiatives.

@@ -93,38 +93,14 @@ function Home() {
         </Container>
       </Container>
 
-      <Container className="home-surface home-social-section">
+            <Container className="home-stack-section home-surface">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-eyebrow">Let's Connect</p>
-          <h2 className="section-title">Building scalable platforms together</h2>
-          <p className="section-subtitle">
-            Passionate about platform engineering, hybrid cloud architectures, and DevOps best practices. Let's collaborate on projects that enables teams to innovate faster.
-          </p>
-          <div className="home-social-links">
-            <a
-              href="https://github.com/brar-karamjit"
-              target="_blank"
-              rel="noreferrer"
-              className="home-social-icon"
-              aria-label="GitHub profile"
-            >
-              <AiFillGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kramjitbr/"
-              target="_blank"
-              rel="noreferrer"
-              className="home-social-icon"
-              aria-label="LinkedIn profile"
-            >
-              <FaLinkedinIn />
-            </a>
-          </div>
+          <Certifications />
         </motion.div>
       </Container>
 
@@ -160,14 +136,52 @@ function Home() {
         </motion.div>
       </Container>
 
-      <Container className="home-stack-section home-surface">
+
+
+      <Container className="home-surface home-social-section">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Certifications />
+          <div className="home-social-content">
+            <p className="section-eyebrow">Let's Connect</p>
+            <h2 className="section-title">Ready to Collaborate?</h2>
+            <p className="section-subtitle">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <div className="home-social-links">
+              <a
+                href="https://github.com/brar-karamjit"
+                target="_blank"
+                rel="noreferrer"
+                className="home-social-icon"
+                aria-label="GitHub profile"
+              >
+                <AiFillGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kramjitbr/"
+                target="_blank"
+                rel="noreferrer"
+                className="home-social-icon"
+                aria-label="LinkedIn profile"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
+            <div className="home-contact-cta">
+              <a
+                href="https://www.linkedin.com/in/kramjitbr/"
+                target="_blank"
+                rel="noreferrer"
+                className="home-cta-btn"
+              >
+                Say Hello
+              </a>
+            </div>
+          </div>
         </motion.div>
       </Container>
     </section>

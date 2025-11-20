@@ -437,6 +437,59 @@
   border-radius: 12px;
 }
 
+/* Let's Connect Section */
+.home-social-section {
+  text-align: center;
+  background: linear-gradient(180deg, var(--home-surface) 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+.home-social-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-contact-cta {
+  margin-top: 3rem;
+}
+
+.home-cta-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--home-text-primary);
+  background: transparent;
+  border: 1px solid var(--home-accent);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--home-accent);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.home-cta-btn:hover {
+  color: white;
+  box-shadow: 0 10px 20px -5px var(--home-accent-glow);
+  transform: translateY(-3px);
+}
+
+.home-cta-btn:hover::before {
+  width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 991px) {
   .home-hero-text {
