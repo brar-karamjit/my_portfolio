@@ -108,9 +108,11 @@ function BlogIndex() {
       <Particle />
 
       <Container className="blog-posts home-surface">
-        <p className="section-eyebrow">Welcome</p>
-        <h1 className="blog-heading">Stories of platform engineering</h1>
-        
+        <p className="section-eyebrow">Insights & Stories</p>
+        <h1 className="blog-heading">Platform Engineering Chronicles</h1>
+        <p className="blog-subheading">
+          Exploring the intersection of DevOps, cloud architecture, and operational excellence through real-world experiences, technical deep dives, and lessons learned in building scalable platforms.
+        </p>
 
         {renderStatus()}
 
