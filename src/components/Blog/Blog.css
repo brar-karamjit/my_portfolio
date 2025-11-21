@@ -72,7 +72,7 @@
 .blog-hero-subtitle {
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   line-height: 1.8;
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   margin-bottom: 1.8rem;
 }
 
@@ -90,7 +90,7 @@
   list-style: none;
   display: grid;
   gap: 0.95rem;
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: 1rem;
 }
 
@@ -162,7 +162,7 @@
 }
 
 .blog-hero-panel-body {
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: 0.98rem;
   line-height: 1.7;
   margin-bottom: 1.6rem;
@@ -185,7 +185,7 @@
 }
 
 .blog-hero-panel-footer {
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -211,10 +211,10 @@
 }
 
 .blog-card-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -230,7 +230,7 @@
 .blog-subheading {
   margin-bottom: 3rem;
   max-width: 600px;
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: clamp(1.1rem, 1.4vw, 1.25rem);
   line-height: 1.8;
   text-align: center;
@@ -285,12 +285,12 @@
 }
 
 .blog-card-time {
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: 0.85rem;
 }
 
 .blog-card-date {
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
@@ -305,7 +305,7 @@
 }
 
 .blog-card-summary {
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
@@ -339,7 +339,7 @@
   border-radius: 18px;
   border: 1px solid rgba(100, 255, 218, 0.16);
   background: rgba(5, 13, 30, 0.6);
-  color: var(--home-text-muted);
+  color: var(--home-text-secondary);
   text-align: center;
 }
 

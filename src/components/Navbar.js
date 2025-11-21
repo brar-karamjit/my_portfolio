@@ -157,6 +157,7 @@ function NavBar() {
                 href="https://k8s.karamjitbrar.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                active={false}
                 onClick={() => updateExpanded(false)}
               >
                 <SiKubernetes style={{ marginBottom: "2px" }} /> K8 Lab
