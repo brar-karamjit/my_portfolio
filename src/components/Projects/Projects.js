@@ -62,10 +62,8 @@ function Projects() {
         <hr className="projects-divider" />
 
         <Container className="projects-hero">
-          <h1 className="projects-title">Interactive Labs</h1>
-          <p className="projects-subtitle" style={{ color: 'var(--home-text-secondary)', maxWidth: '600px', margin: '1rem auto 0', lineHeight: '1.6' }}>
-            Animations that explain the protocols. Rerun the packet journeys and cryptography walkthroughs.
-          </p>
+          <h1 className="projects-title">Animations</h1>
+          
         </Container>
 
         <Container className="projects-grid home-surface">

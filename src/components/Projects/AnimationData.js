@@ -1,5 +1,6 @@
 import httpsImg from "../../Assets/Projects/portfolio.png";
 import icmpImg from "../../Assets/Projects/inventory.png";
+import aiImg from "../../Assets/Projects/AI-assistant.png";
 
 export const interactivePosts = [
   {
@@ -23,6 +24,17 @@ export const interactivePosts = [
     readingTime: "5 min watch",
     path: "/blog/icmp-ping",
     imgPath: icmpImg
+  },
+  {
+    id: "ddos-attack",
+    title: "DDoS Attack Simulation",
+    summary:
+      "Visualize how distributed denial-of-service attacks overwhelm servers and learn defense strategies.",
+    tags: ["Security", "Networking", "Cybersecurity"],
+    topic: "Threat Analysis",
+    readingTime: "7 min watch",
+    path: "/blog/ddos-attack",
+    imgPath: aiImg
   }
 ];
 
