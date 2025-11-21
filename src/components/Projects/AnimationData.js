@@ -1,3 +1,6 @@
+import httpsImg from "../../Assets/Projects/portfolio.png";
+import icmpImg from "../../Assets/Projects/inventory.png";
+
 export const interactivePosts = [
   {
     id: "https-key-exchange",
@@ -7,7 +10,8 @@ export const interactivePosts = [
     tags: ["Security", "Networking"],
     topic: "Zero Trust Foundations",
     readingTime: "6 min watch",
-    path: "/blog/https-key-exchange"
+    path: "/blog/https-key-exchange",
+    imgPath: httpsImg
   },
   {
     id: "icmp-ping",
@@ -17,7 +21,9 @@ export const interactivePosts = [
     tags: ["Diagnostics", "Networking"],
     topic: "Day-2 Operations",
     readingTime: "5 min watch",
-    path: "/blog/icmp-ping"
+    path: "/blog/icmp-ping",
+    imgPath: icmpImg
   }
 ];
+
 export default interactivePosts;

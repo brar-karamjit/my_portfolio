@@ -6,7 +6,7 @@ import AnimationCard from "./AnimationCard";
 import momentImg from "../../Assets/Projects/AI-assistant.png";
 import inventoryImg from "../../Assets/Projects/inventory.png";
 import portfolioImg from "../../Assets/Projects/portfolio.png";
-import { interactivePosts } from "../Animations/Animations";
+import { interactivePosts } from "./AnimationData";
 
 import "../Home/Home.css";
 import "./Projects.css";
