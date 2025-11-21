@@ -309,7 +309,7 @@
 }
 
 .tech-icons:hover::before {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .tech-icons img {
@@ -332,13 +332,13 @@
 }
 
 .tech-icons:hover img {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
   transform: scale(1.1);
 }
 
 .tech-icons:hover svg {
   color: var(--home-accent-light);
-  filter: drop-shadow(0 0 8px var(--home-accent));
+  filter: drop-shadow(0 0 4px var(--home-accent));
   transform: scale(1.1);
 }
 
@@ -395,7 +395,6 @@
   max-width: 180px;
   object-fit: contain;
   margin-bottom: 1rem;
-  filter: grayscale(10%);
   transition: all 0.4s ease;
   opacity: 0.9;
 }
