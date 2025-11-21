@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
+import AnimationCard from "./AnimationCard";
 import momentImg from "../../Assets/Projects/AI-assistant.png";
 import inventoryImg from "../../Assets/Projects/inventory.png";
 import portfolioImg from "../../Assets/Projects/portfolio.png";
-import { Link } from "react-router-dom";
 import { interactivePosts } from "../Animations/Animations";
 
 import "../Home/Home.css";
@@ -61,36 +61,17 @@ function Projects() {
 
         <hr className="projects-divider" />
 
-        <Container className="projects-animations home-surface">
-          <p className="section-eyebrow">Interactive Labs</p>
-          <h2 className="projects-animations-title">Animations that explain the protocols</h2>
-          <p className="projects-animations-subtitle">
-            Rerun the packet journeys and cryptography walkthroughs from the blog right here.
+        <Container className="projects-hero">
+          <h1 className="projects-title">Interactive Labs</h1>
+          <p className="projects-subtitle" style={{ color: 'var(--home-text-secondary)', maxWidth: '600px', margin: '1rem auto 0', lineHeight: '1.6' }}>
+            Animations that explain the protocols. Rerun the packet journeys and cryptography walkthroughs.
           </p>
-          <div className="blog-card-grid projects-animations-grid">
+        </Container>
+
+        <Container className="projects-grid home-surface">
+          <div className="projects-grid-list">
             {interactivePosts.map((post) => (
-              <Card
-                as={Link}
-                to={post.path}
-                key={post.id}
-                className="blog-card"
-              >
-                <Card.Body>
-                  <div className="blog-card-meta">
-                    <span className="blog-card-topic">{post.topic}</span>
-                    <span className="blog-card-time">{post.readingTime}</span>
-                  </div>
-                  <Card.Title className="blog-card-title">{post.title}</Card.Title>
-                  <Card.Text className="blog-card-summary">{post.summary}</Card.Text>
-                  <div className="blog-card-tags">
-                    {post.tags.map((tag) => (
-                      <span key={tag} className="blog-card-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </Card.Body>
-              </Card>
+              <AnimationCard key={post.id} {...post} />
             ))}
           </div>
         </Container>

@@ -1,10 +1,7 @@
 .resume-section {
+  
   position: relative;
   padding: 130px 0 110px;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(79, 224, 195, 0.08), transparent 55%),
-    radial-gradient(circle at 88% 8%, rgba(120, 144, 255, 0.12), transparent 58%),
-    linear-gradient(135deg, var(--home-bg) 0%, #091025 40%, var(--home-bg-alt) 100%);
   color: var(--home-text-primary);
 }
 
