@@ -1,6 +1,6 @@
-import httpsImg from "../../Assets/Projects/portfolio.png";
+import httpsImg from "../../Assets/Projects/keyex.png";
 import icmpImg from "../../Assets/Projects/inventory.png";
-import aiImg from "../../Assets/Projects/AI-assistant.png";
+import ddos from "../../Assets/Projects/ddos.png";
 
 export const interactivePosts = [
   {
@@ -34,7 +34,7 @@ export const interactivePosts = [
     topic: "Threat Analysis",
     readingTime: "7 min watch",
     path: "/blog/ddos-attack",
-    imgPath: aiImg
+    imgPath: ddos
   }
 ];
 
