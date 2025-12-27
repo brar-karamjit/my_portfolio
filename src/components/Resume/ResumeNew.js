@@ -78,6 +78,7 @@ function ResumeNew() {
                   <li>Systems engineering at Questrade with reliability focus</li>
                   <li>End-to-end CI/CD, observability, and infrastructure-as-code</li>
                   <li>Enabling cross-functional teams through scalable tooling</li>
+                  <li>Kubernetes orchestration, ArgoCD, and container management</li>
                 </ul>
               </div>
             </Col>
