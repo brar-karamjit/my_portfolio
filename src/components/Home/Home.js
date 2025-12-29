@@ -225,15 +225,6 @@ function Home() {
           transition={{ duration: 0.6 }}
         >
           <div className="home-social-content">
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-              className="home-connect-icon-wrapper"
-            >
-              <span className="home-connect-icon">👋</span>
-            </motion.div>
             <motion.p 
               className="section-eyebrow"
               initial={{ opacity: 0 }}
