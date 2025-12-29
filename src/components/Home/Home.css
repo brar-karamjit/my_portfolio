@@ -705,6 +705,7 @@
   background: linear-gradient(180deg, var(--home-surface) 0%, rgba(139, 92, 246, 0.05) 100%);
   position: relative;
   overflow: hidden;
+  margin-bottom: 4rem;
 }
 
 .home-social-bg-pattern {
