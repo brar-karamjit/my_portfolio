@@ -149,7 +149,7 @@ function Home() {
             <p className="section-eyebrow">Let's Connect</p>
             <h2 className="section-title">Ready to Collaborate?</h2>
             <p className="section-subtitle">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+              Always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             <div className="home-social-links">
               <a
