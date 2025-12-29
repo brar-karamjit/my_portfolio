@@ -755,7 +755,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--home-text-primary);
-  background: linear-gradient(135deg, var(--home-accent), var(--home-accent-secondary));
+  background: var(--home-accent);
   border: none;
   border-radius: 50px;
   text-decoration: none;
