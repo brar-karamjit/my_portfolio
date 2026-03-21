@@ -176,15 +176,7 @@ function Home() {
           >
             Toolkit
           </motion.p>
-          <motion.h2 
-            className="project-heading home-section-heading"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            Tools and Platforms
-          </motion.h2>
+          
           <motion.p 
             className="section-subtitle"
             initial={{ opacity: 0, y: 10 }}
@@ -192,7 +184,7 @@ function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            Technologies and platforms I leverage to architect, automate, and operate resilient infrastructure across cloud and hybrid environments.
+            Technologies and platforms I leverage to architect, automate, and operate infrastructure.
           </motion.p>
           <Techstack />
         </motion.div>
@@ -205,11 +197,8 @@ function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="section-eyebrow">Environments</p>
-          <h2 className="project-heading home-section-heading">Operating Systems</h2>
-          <p className="section-subtitle">
-            Deep expertise across Linux and Windows ecosystems in cloud-native, hybrid, and on-premises deployments.
-          </p>
+          <p className="section-eyebrow">Operating Systems</p>
+          
           <OsStack />
         </motion.div>
       </Container>
@@ -234,24 +223,7 @@ function Home() {
             >
               Let's Connect
             </motion.p>
-            <motion.h2 
-              className="section-title home-section-heading"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              Ready to Collaborate?
-            </motion.h2>
-            <motion.p 
-              className="section-subtitle"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-            >
-              Always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </motion.p>
+            
             <motion.div 
               className="home-social-links"
               initial={{ opacity: 0, y: 20 }}
@@ -282,25 +254,6 @@ function Home() {
               >
                 <FaLinkedinIn />
                 <span className="home-social-tooltip">LinkedIn</span>
-              </motion.a>
-            </motion.div>
-            <motion.div 
-              className="home-contact-cta"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.7 }}
-            >
-              <motion.a
-                href="https://www.linkedin.com/in/kramjitbr/"
-                target="_blank"
-                rel="noreferrer"
-                className="home-cta-btn"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="home-cta-btn-text">Say Hello</span>
-                <span className="home-cta-btn-arrow">→</span>
               </motion.a>
             </motion.div>
           </div>
