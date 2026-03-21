@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+env:
+  # Opt into Node.js 24 for JavaScript-based GitHub Actions ahead of the Node 20 deprecation cutoff.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   # Grant just enough permissions to read the repo, upload the artifact, and authenticate the deploy (OIDC token).
   contents: read
