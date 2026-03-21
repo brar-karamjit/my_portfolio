@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import "./Home.css";
 import {
   SiArgocd,
+  SiIstio,
   SiSaltproject,
   SiSplunk,
 } from "react-icons/si";
@@ -86,6 +87,11 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiArgocd />
         <div className="tech-icons-text">ArgoCD</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiIstio />
+        <div className="tech-icons-text">Istio</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
