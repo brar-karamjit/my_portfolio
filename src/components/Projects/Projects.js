@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Kubernetes Lab",
     description:
-      "Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI) with a CI/CD pipeline using GitHub Actions, Argo CD, and Prometheus for monitoring.",
+      "Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI). Features a CI/CD pipeline using GitHub Actions and Argo CD.",
     imgPath: inventoryImg,
     ghLink: "https://github.com/brar-karamjit/devops_tools",
     demoLink: "https://k8s.karamjitbrar.com/",
