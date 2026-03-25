@@ -19,17 +19,17 @@ const projects = [
       "Personalized activity recommendations to enhance daily experiences, using location, weather, and generative AI to recommend activities.",
     imgPath: momentImg,
     ghLink: "https://github.com/brar-karamjit/MomentInMotion",
-    demoLink: "https://moment-in-motion.web.app/",
+    demoLink: "https://momo.karamjitbrar.com/",
     tags: ["Django", "AI", "Gemini", "Kubernetes"],
   },
   {
-    title: "Inventory Manager",
+    title: "Kubernetes Lab",
     description:
-      "Role-based inventory operations with audit trails, low-stock automation, and customizable dashboards for fast-moving product teams.",
+      "Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI) with a CI/CD pipeline using GitHub Actions, Argo CD, and Prometheus for monitoring.",
     imgPath: inventoryImg,
-    ghLink: "https://github.com/brar-karamjit/inventory_manager",
-    demoLink: "https://hub.docker.com/repository/docker/karamjitbrar/inventory_manager",
-    tags: ["Django", "CRUD", "Docker", "CI/CD"],
+    ghLink: "https://github.com/brar-karamjit/devops_tools",
+    demoLink: "https://k8s.karamjitbrar.com/",
+    tags: ["Kubernetes", "OCI", "CI/CD", "Prometheus"],
   },
   {
     title: "Portfolio Platform",
