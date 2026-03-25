@@ -4,7 +4,7 @@ import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
 import AnimationCard from "./AnimationCard";
 import momentImg from "../../Assets/Projects/AI-assistant.png";
-import inventoryImg from "../../Assets/Projects/inventory.png";
+import kubernetesGif from "../../Assets/Projects/kubenetes.gif";
 import portfolioImg from "../../Assets/Projects/portfolio.png";
 import { interactivePosts } from "./AnimationData";
 
@@ -26,7 +26,7 @@ const projects = [
     title: "Kubernetes Lab",
     description:
       "Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI). Features a CI/CD pipeline using GitHub Actions and Argo CD.",
-    imgPath: inventoryImg,
+    imgPath: kubernetesGif,
     ghLink: "https://github.com/brar-karamjit/devops_tools",
     demoLink: "https://k8s.karamjitbrar.com/",
     tags: ["Kubernetes", "OCI", "CI/CD", "Prometheus"],
