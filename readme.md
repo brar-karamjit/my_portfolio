@@ -24,6 +24,7 @@
 **Frameworks & Languages**<br>
 <img src="src/Assets/TechIcons/Python.svg" alt="Python" height="40" />
 <img src="src/Assets/TechIcons/Java.svg" alt="Java" height="40" />
+<img src="src/Assets/TechIcons/bash.svg" alt="Bash" height="40" />
 <img src="src/Assets/TechIcons/powershell.svg" alt="PowerShell" height="40" />
 
 **Platforms & Tooling**<br>

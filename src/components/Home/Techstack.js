@@ -19,6 +19,7 @@ import terraform from "../../Assets/TechIcons/terraform.svg";
 import jenkins from "../../Assets/TechIcons/jenkins.svg";
 import ansible from "../../Assets/TechIcons/ansible.svg";
 import gcp from "../../Assets/TechIcons/gcp.svg";
+import bash from "../../Assets/TechIcons/bash.svg";
 import powershell from "../../Assets/TechIcons/powershell.svg";
 import prometheus from "../../Assets/TechIcons/prometheus.svg";
 import grafana from "../../Assets/TechIcons/grafana.svg";
@@ -112,6 +113,11 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <img src={gcp} alt="Google Cloud" className="tech-icon-images" />
         <div className="tech-icons-text">Google Cloud</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={bash} alt="Bash" className="tech-icon-images" />
+        <div className="tech-icons-text">Bash</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
