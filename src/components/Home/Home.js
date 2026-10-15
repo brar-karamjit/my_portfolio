@@ -70,7 +70,7 @@ function Home() {
                   transition={{ delay: 0.1, duration: 0.5 }}
                 >
                   <span className="home-status-dot" />
-                  Platform Engineer · Cloud &amp; Hybrid Infrastructure
+                  Platform Engineer &amp; AI Automation
                 </motion.span>
                 <motion.h2 
                   className="home-title"
@@ -94,7 +94,7 @@ function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                  I build, scale and maintain automation for infrastructure across cloud and on-premise environments, empowering engineering teams with reliable systems and self-service capabilities.
+                  I build automated platforms across cloud and on-premises environments, combining infrastructure engineering with AI-powered tools that help teams troubleshoot and deliver faster.
                 </motion.p>
                 <motion.div 
                   className="home-divider" 
@@ -244,7 +244,7 @@ function Home() {
                 <span className="home-social-tooltip">GitHub</span>
               </motion.a>
               <motion.a
-                href="https://www.linkedin.com/in/kramjitbr/"
+                href="https://www.linkedin.com/in/karamjitbrar/"
                 target="_blank"
                 rel="noreferrer"
                 className="home-social-icon"

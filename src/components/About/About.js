@@ -24,12 +24,12 @@ function About() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <h1 className="about-title">
-                  Engineering platforms that scale across cloud and hybrid environments
+                  Platform engineering and AI automation for reliable infrastructure
                 </h1>
                 <p className="about-subtitle">
-                  I'm a Platform Engineer specializing in DevOps practices, translating business requirements into robust, 
-                  automated infrastructure. From multi-cloud orchestration to hybrid deployments, I build the foundation 
-                  that enables engineering teams to deliver faster and more reliably.
+                  I'm a Platform Engineer at Questrade focused on cloud and hybrid infrastructure, automation, and AI-enabled
+                  tooling. I build systems that simplify operations, speed up delivery, and help engineering teams work
+                  more reliably.
                 </p>
               </motion.div>
             </Col>

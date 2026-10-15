@@ -11,7 +11,7 @@
 ## Quick Links
 | Live Site | Resume | Contact |
 | --- | --- | --- |
-| [Portfolio](https://brar-karamjit.github.io/my_portfolio) | [Download CV](src/Assets/Karamjit_Brar.pdf) | [Connect on LinkedIn](https://www.linkedin.com/in/brarkaramjit) |
+| [Portfolio](https://brar-karamjit.github.io/my_portfolio) | [Download CV](src/Assets/Karamjit_Brar.pdf) | [Connect on LinkedIn](https://www.linkedin.com/in/karamjitbrar/) |
 
 ## Highlights
 - Animated landing page with hero particles, social links, and curated tech stack spotlight.

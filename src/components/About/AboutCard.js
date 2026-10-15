@@ -8,19 +8,19 @@ function AboutCard() {
     <div className="about-card">
       <p className="about-card-lead">
         Hi! I'm <span className="about-highlight">Karamjit Brar</span>, a
-        <span className="about-highlight"> Platform Engineer</span> specializing in DevOps, cloud, and hybrid infrastructure based in
+        <span className="about-highlight"> Platform Engineer &amp; AI Automation specialist</span> focused on cloud and hybrid infrastructure, based in
         <span className="about-highlight"> Toronto, Canada</span>.
       </p>
       <p className="about-card-body">
-        Currently a <span className="about-highlight">Systems Engineer at Questrade</span>, I architect and operate 
-        scalable platform infrastructure spanning cloud and on-premises environments. My focus is on building 
-        self-service capabilities, robust CI/CD pipelines, and infrastructure-as-code solutions that enable teams 
-        to deploy with confidence across hybrid architectures.
+        Currently a <span className="about-highlight">Systems Engineer at Questrade</span>, I build scalable platform
+        infrastructure and automation across cloud and on-premises environments. I also develop AI-powered tools that
+        streamline troubleshooting and infrastructure workflows, alongside self-service capabilities, CI/CD pipelines,
+        and infrastructure-as-code solutions.
       </p>
       <div className="about-card-facts">
         <div className="about-card-fact">
           <span className="about-card-fact-label">Focus</span>
-          <span className="about-card-fact-value">Platform Engineering &amp; Hybrid Cloud</span>
+          <span className="about-card-fact-value">Platform Engineering, AI Automation &amp; Hybrid Cloud</span>
         </div>
         <div className="about-card-fact">
           <span className="about-card-fact-label">Education</span>
