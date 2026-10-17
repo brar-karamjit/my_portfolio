@@ -585,6 +585,11 @@
   z-index: 1;
 }
 
+.tech-icons img.tech-icon-zoom {
+  height: 60px !important;
+  width: 100px !important;
+}
+
 .tech-icons svg {
   font-size: 44px !important;
   margin-bottom: 12px;

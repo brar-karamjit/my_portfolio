@@ -28,7 +28,7 @@ const groups = [
       { name: "Google Cloud", img: gcp },
       { name: "Kubernetes", img: Kubernates },
       { name: "vSphere", img: vsphere },
-      { name: "Oracle", img: oracle },
+      { name: "Oracle", img: oracle, hideLabel: true, zoom: true },
     ],
   },
   {
@@ -76,12 +76,14 @@ function Techstack() {
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="tech-icon-images"
+                    className={`tech-icon-images${item.zoom ? " tech-icon-zoom" : ""}`}
                   />
                 ) : (
                   item.icon
                 )}
-                <div className="tech-icons-text">{item.name}</div>
+                {!item.hideLabel && (
+                  <div className="tech-icons-text">{item.name}</div>
+                )}
               </Col>
             ))}
           </Row>
