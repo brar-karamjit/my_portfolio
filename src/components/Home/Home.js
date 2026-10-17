@@ -6,8 +6,10 @@ import Type from "./Type";
 import Techstack from "./Techstack";
 import OsStack from "./OsStack";
 import Certifications from "./Certifications";
+import FeaturedProjects from "./FeaturedProjects";
+import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { BsStars } from "react-icons/bs";
 import { motion } from "framer-motion";
@@ -112,6 +114,34 @@ function Home() {
                   <Type />
                   <span className="home-typewriter-label"></span>
                 </motion.div>
+                <motion.div
+                  className="home-hero-actions"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.5 }}
+                >
+                  <Link to="/project" className="home-btn home-btn-primary">
+                    View Projects
+                  </Link>
+                  <a
+                    href="https://github.com/brar-karamjit"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-btn home-btn-secondary"
+                  >
+                    <AiFillGithub />
+                    &nbsp;GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/karamjitbrar/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-btn home-btn-secondary"
+                  >
+                    <FaLinkedinIn />
+                    &nbsp;LinkedIn
+                  </a>
+                </motion.div>
               </motion.div>
             </Col>
 
@@ -149,14 +179,14 @@ function Home() {
         </Container>
       </Container>
 
-            <Container className="home-stack-section home-surface">
+      <Container className="home-stack-section home-surface">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Certifications />
+          <FeaturedProjects />
         </motion.div>
       </Container>
 
@@ -174,7 +204,7 @@ function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Toolkit
+            Technical Toolkit
           </motion.p>
           
           <motion.p 
@@ -203,6 +233,16 @@ function Home() {
         </motion.div>
       </Container>
 
+      <Container className="home-stack-section home-surface">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <Certifications />
+        </motion.div>
+      </Container>
 
 
       <Container className="home-surface home-social-section">
@@ -254,6 +294,16 @@ function Home() {
               >
                 <FaLinkedinIn />
                 <span className="home-social-tooltip">LinkedIn</span>
+              </motion.a>
+              <motion.a
+                href="mailto:br.kramjit@gmail.com"
+                className="home-social-icon"
+                aria-label="Send an email"
+                whileHover={{ scale: 1.1, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaEnvelope />
+                <span className="home-social-tooltip">Email</span>
               </motion.a>
             </motion.div>
           </div>

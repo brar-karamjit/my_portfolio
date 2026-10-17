@@ -1,12 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./Home.css";
-import {
-  SiArgo,
-  SiIstio,
-  SiSaltproject,
-  SiSplunk,
-} from "react-icons/si";
+import { SiArgo, SiIstio, SiSaltproject, SiSplunk } from "react-icons/si";
 import Java from "../../Assets/TechIcons/Java.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
@@ -22,97 +17,73 @@ import powershell from "../../Assets/TechIcons/powershell.svg";
 import prometheus from "../../Assets/TechIcons/prometheus.svg";
 import grafana from "../../Assets/TechIcons/grafana.svg";
 
+// `img` renders an SVG asset; `icon` renders a react-icons component.
+const groups = [
+  {
+    title: "Cloud & Platforms",
+    items: [
+      { name: "AWS", img: AWS },
+      { name: "Google Cloud", img: gcp },
+      { name: "Kubernetes", img: Kubernates },
+      { name: "Docker", img: Docker },
+      { name: "Istio", icon: <SiIstio /> },
+    ],
+  },
+  {
+    title: "Infrastructure & CI/CD",
+    items: [
+      { name: "Terraform", img: terraform },
+      { name: "Ansible", img: ansible },
+      { name: "SaltStack", icon: <SiSaltproject /> },
+      { name: "Jenkins", img: jenkins },
+      { name: "ArgoCD", icon: <SiArgo /> },
+      { name: "Git", img: Git },
+    ],
+  },
+  {
+    title: "AI & Programming",
+    items: [
+      { name: "Python", img: Python },
+      { name: "Java", img: Java },
+      { name: "Bash", img: bash },
+      { name: "PowerShell", img: powershell },
+    ],
+  },
+  {
+    title: "Observability",
+    items: [
+      { name: "Prometheus", img: prometheus },
+      { name: "Grafana", img: grafana },
+      { name: "Splunk", icon: <SiSplunk /> },
+    ],
+  },
+];
+
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Git} alt="git" />
-        <div className="tech-icons-text">Git</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Docker} alt="docker" />
-        <div className="tech-icons-text">Docker</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Kubernates} alt="kubernetes" />
-        <div className="tech-icons-text">Kubernetes</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Python} alt="Python" />
-        <div className="tech-icons-text">Python</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Java} alt="java" />
-        <div className="tech-icons-text">Java</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={AWS} alt="aws" className="tech-icon-images" />
-        <div className="tech-icons-text">AWS</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={terraform} alt="Terraform" className="tech-icon-images" />
-        <div className="tech-icons-text">Terraform</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={jenkins} alt="Jenkins" className="tech-icon-images" />
-        <div className="tech-icons-text">Jenkins</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={ansible} alt="Ansible" className="tech-icon-images" />
-        <div className="tech-icons-text">Ansible</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSaltproject />
-        <div className="tech-icons-text">SaltStack</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiArgo />
-        <div className="tech-icons-text">ArgoCD</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiIstio />
-        <div className="tech-icons-text">Istio</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={prometheus} alt="Prometheus" className="tech-icon-images" />
-        <div className="tech-icons-text">Prometheus</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={grafana} alt="Grafana" className="tech-icon-images" />
-        <div className="tech-icons-text">Grafana</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSplunk />
-        <div className="tech-icons-text">Splunk</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={gcp} alt="Google Cloud" className="tech-icon-images" />
-        <div className="tech-icons-text">Google Cloud</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={bash} alt="Bash" className="tech-icon-images" />
-        <div className="tech-icons-text">Bash</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={powershell} alt="PowerShell" className="tech-icon-images" />
-        <div className="tech-icons-text">PowerShell</div>
-      </Col>
-    </Row>
+    <>
+      {groups.map((group) => (
+        <div key={group.title} className="tech-group">
+          <h3 className="tech-group-title">{group.title}</h3>
+          <Row style={{ justifyContent: "center" }}>
+            {group.items.map((item) => (
+              <Col key={item.name} xs={4} md={2} className="tech-icons">
+                {item.img ? (
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="tech-icon-images"
+                  />
+                ) : (
+                  item.icon
+                )}
+                <div className="tech-icons-text">{item.name}</div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      ))}
+    </>
   );
 }
 
