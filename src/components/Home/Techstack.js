@@ -7,6 +7,7 @@ import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
 import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
 import vsphere from "../../Assets/TechIcons/vsphere.svg";
+import entraid from "../../Assets/TechIcons/entraid.svg";
 import AWS from "../../Assets/TechIcons/AWS.svg";
 import terraform from "../../Assets/TechIcons/terraform.svg";
 import jenkins from "../../Assets/TechIcons/jenkins.svg";
@@ -29,13 +30,14 @@ const groups = [
     ],
   },
   {
-    title: "Infrastructure & CI/CD",
+    title: "Infrastructure & Tools",
     items: [
       { name: "Terraform", img: terraform },
       { name: "Ansible", img: ansible },
       { name: "SaltStack", icon: <SiSaltproject /> },
       { name: "Jenkins", img: jenkins },
       { name: "ArgoCD", icon: <SiArgo /> },
+      { name: "Entra ID", img: entraid },
       { name: "Git", img: Git },
     ],
   },
