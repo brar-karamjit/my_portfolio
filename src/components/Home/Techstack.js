@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./Home.css";
-import { SiArgo, SiSaltproject, SiSplunk, SiDatadog, SiOracle } from "react-icons/si";
+import { SiArgo, SiSaltproject, SiSplunk, SiDatadog } from "react-icons/si";
 import Java from "../../Assets/TechIcons/Java.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
@@ -15,6 +15,7 @@ import ansible from "../../Assets/TechIcons/ansible.svg";
 import gcp from "../../Assets/TechIcons/gcp.svg";
 import bash from "../../Assets/TechIcons/bash.svg";
 import langchain from "../../Assets/TechIcons/langchain.svg";
+import oracle from "../../Assets/TechIcons/oracle.svg";
 import prometheus from "../../Assets/TechIcons/prometheus.svg";
 import grafana from "../../Assets/TechIcons/grafana.svg";
 
@@ -27,7 +28,7 @@ const groups = [
       { name: "Google Cloud", img: gcp },
       { name: "Kubernetes", img: Kubernates },
       { name: "vSphere", img: vsphere },
-      { name: "Oracle", icon: <SiOracle /> },
+      { name: "Oracle", img: oracle },
     ],
   },
   {
