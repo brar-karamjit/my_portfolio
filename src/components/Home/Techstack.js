@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./Home.css";
-import { SiArgo, SiSaltproject, SiSplunk } from "react-icons/si";
+import { SiArgo, SiSaltproject, SiSplunk, SiDatadog, SiOracle } from "react-icons/si";
 import Java from "../../Assets/TechIcons/Java.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
@@ -14,7 +14,7 @@ import jenkins from "../../Assets/TechIcons/jenkins.svg";
 import ansible from "../../Assets/TechIcons/ansible.svg";
 import gcp from "../../Assets/TechIcons/gcp.svg";
 import bash from "../../Assets/TechIcons/bash.svg";
-import powershell from "../../Assets/TechIcons/powershell.svg";
+import langchain from "../../Assets/TechIcons/langchain.svg";
 import prometheus from "../../Assets/TechIcons/prometheus.svg";
 import grafana from "../../Assets/TechIcons/grafana.svg";
 
@@ -27,6 +27,7 @@ const groups = [
       { name: "Google Cloud", img: gcp },
       { name: "Kubernetes", img: Kubernates },
       { name: "vSphere", img: vsphere },
+      { name: "Oracle", icon: <SiOracle /> },
     ],
   },
   {
@@ -47,12 +48,13 @@ const groups = [
       { name: "Python", img: Python },
       { name: "Java", img: Java },
       { name: "Bash", img: bash },
-      { name: "PowerShell", img: powershell },
+      { name: "LangChain", img: langchain },
     ],
   },
   {
     title: "Observability",
     items: [
+      { name: "Datadog", icon: <SiDatadog /> },
       { name: "Prometheus", img: prometheus },
       { name: "Grafana", img: grafana },
       { name: "Splunk", icon: <SiSplunk /> },
