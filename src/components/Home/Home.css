@@ -543,8 +543,8 @@
   height: 120px;
   margin: 20px !important;
   border-radius: 20px !important;
-  background: rgba(120, 120, 160, 0.28) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background: rgba(30, 30, 45, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
   color: var(--home-text-primary) !important;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   backdrop-filter: blur(10px);
@@ -568,7 +568,7 @@
   transform: translateY(-10px) !important;
   border-color: var(--home-accent) !important;
   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5) !important;
-  background: rgba(130, 130, 175, 0.42) !important;
+  background: rgba(30, 30, 45, 0.8) !important;
 }
 
 .tech-icons:hover::before {
