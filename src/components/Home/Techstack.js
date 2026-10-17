@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./Home.css";
-import { SiArgo, SiIstio, SiSaltproject, SiSplunk } from "react-icons/si";
+import { SiArgo, SiSaltproject, SiSplunk } from "react-icons/si";
 import Java from "../../Assets/TechIcons/Java.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
-import Docker from "../../Assets/TechIcons/Docker.svg";
 import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
+import vsphere from "../../Assets/TechIcons/vsphere.svg";
 import AWS from "../../Assets/TechIcons/AWS.svg";
 import terraform from "../../Assets/TechIcons/terraform.svg";
 import jenkins from "../../Assets/TechIcons/jenkins.svg";
@@ -25,8 +25,7 @@ const groups = [
       { name: "AWS", img: AWS },
       { name: "Google Cloud", img: gcp },
       { name: "Kubernetes", img: Kubernates },
-      { name: "Docker", img: Docker },
-      { name: "Istio", icon: <SiIstio /> },
+      { name: "vSphere", img: vsphere },
     ],
   },
   {
