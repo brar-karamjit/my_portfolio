@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./Home.css";
-import { SiArgo, SiSaltproject, SiSplunk, SiDatadog } from "react-icons/si";
+import { SiArgo, SiSaltproject, SiSplunk } from "react-icons/si";
 import Java from "../../Assets/TechIcons/Java.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
@@ -16,6 +16,7 @@ import gcp from "../../Assets/TechIcons/gcp.svg";
 import bash from "../../Assets/TechIcons/bash.svg";
 import langchain from "../../Assets/TechIcons/langchain.svg";
 import oracle from "../../Assets/TechIcons/oracle.svg";
+import datadog from "../../Assets/TechIcons/datadog.svg";
 import prometheus from "../../Assets/TechIcons/prometheus.svg";
 import grafana from "../../Assets/TechIcons/grafana.svg";
 
@@ -55,7 +56,7 @@ const groups = [
   {
     title: "Observability",
     items: [
-      { name: "Datadog", icon: <SiDatadog /> },
+      { name: "Datadog", img: datadog },
       { name: "Prometheus", img: prometheus },
       { name: "Grafana", img: grafana },
       { name: "Splunk", icon: <SiSplunk /> },
