@@ -2,10 +2,8 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
-import AnimationCard from "./AnimationCard";
 import momentImg from "../../Assets/Projects/AI-assistant.png";
 import kubernetesGif from "../../Assets/Projects/kubenetes.gif";
-import { interactivePosts } from "./AnimationData";
 
 import "../Home/Home.css";
 import "./Projects.css";
@@ -55,20 +53,6 @@ function Projects() {
           </div>
         </Container>
 
-        <hr className="projects-divider" />
-
-        <Container className="projects-hero">
-          <h1 className="projects-title">Animations</h1>
-          
-        </Container>
-
-        <Container className="projects-grid home-surface">
-          <div className="projects-grid-list">
-            {interactivePosts.map((post) => (
-              <AnimationCard key={post.id} {...post} />
-            ))}
-          </div>
-        </Container>
       </section>
     </>
   );
