@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import {
-  AiOutlineBook,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
@@ -139,16 +138,6 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/blog"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineBook style={{ marginBottom: "2px" }} /> Blog
               </Nav.Link>
             </Nav.Item>
 

@@ -1,0 +1,29 @@
+.animation-page-layout {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 90px !important;
+  padding-bottom: 60px !important;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(79, 224, 195, 0.09), transparent 55%),
+    linear-gradient(135deg, var(--home-bg) 0%, #0a1330 55%, var(--home-bg-alt) 100%);
+  color: var(--home-text-primary);
+}
+
+.animation-detail-container {
+  position: relative;
+  z-index: 1;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+@media (max-width: 767px) {
+  .animation-page-layout {
+    padding-top: 70px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .animation-detail-container {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+}

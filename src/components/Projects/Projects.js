@@ -10,7 +10,6 @@ import { interactivePosts } from "./AnimationData";
 
 import "../Home/Home.css";
 import "./Projects.css";
-import "../Blog/Blog.css";
 
 const projects = [
   {
