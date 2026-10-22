@@ -38,16 +38,16 @@ function ProjectCards({ title, description, imgPath, ghLink, demoLink, tags = []
               </a>
             )}
             {hasDemo && (
-            <a
-              href={demoLink}
-              target="_blank"
-              rel="noreferrer"
-              className="project-card-link"
-              aria-label={`${title} live demo`}
-            >
-              <CgWebsite aria-hidden="true" />
-              <span>Live demo</span>
-            </a>
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noreferrer"
+                className="project-card-link"
+                aria-label={`${title} live demo`}
+              >
+                <CgWebsite aria-hidden="true" />
+                <span>Live demo</span>
+              </a>
             )}
           </div>
         )}
