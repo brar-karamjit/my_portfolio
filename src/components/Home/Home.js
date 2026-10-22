@@ -120,7 +120,7 @@ function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.5 }}
                 >
-                  <Link to="/project" className="home-btn home-btn-primary">
+                  <Link to="/project" className="home-btn home-btn-secondary">
                     View Projects
                   </Link>
                   <a
