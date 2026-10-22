@@ -5,7 +5,6 @@ import ProjectCard from "./ProjectCards";
 import AnimationCard from "./AnimationCard";
 import momentImg from "../../Assets/Projects/AI-assistant.png";
 import kubernetesGif from "../../Assets/Projects/kubenetes.gif";
-import portfolioImg from "../../Assets/Projects/portfolio.png";
 import { interactivePosts } from "./AnimationData";
 
 import "../Home/Home.css";
@@ -31,13 +30,11 @@ const projects = [
     tags: ["Kubernetes", "OCI", "CI/CD", "Prometheus"],
   },
   {
-    title: "Portfolio Platform",
+    title: "AI-Powered ChatOps Agent",
     description:
-      "The site you are exploring—crafted with React and a DevOps mindset to showcase projects, experiments, and a resilient design system.",
-    imgPath: portfolioImg,
-    ghLink: "https://github.com/brar-karamjit/my_portfolio",
-    demoLink: "https://karamjitbrar.com/",
-    tags: ["React", "Vercel", "Framer Motion", "Portfolio"],
+      "An AI-driven Slack agent built with LangChain to troubleshoot failed Jenkins builds, create GitLab infrastructure merge requests, and streamline Jira workflows.",
+    imgPath: momentImg,
+    tags: ["LangChain", "Slack", "Jenkins", "GitLab", "Jira"],
   },
 ];
 

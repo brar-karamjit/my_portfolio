@@ -5,6 +5,7 @@ import { CgWebsite } from "react-icons/cg";
 import "./Projects.css";
 
 function ProjectCards({ title, description, imgPath, ghLink, demoLink, tags = [] }) {
+  const hasGithub = Boolean(ghLink);
   const hasDemo = Boolean(demoLink);
 
   return (
@@ -22,18 +23,21 @@ function ProjectCards({ title, description, imgPath, ghLink, demoLink, tags = []
             ))}
           </ul>
         )}
-        <div className="project-card-actions">
-          <a
-            href={ghLink}
-            target="_blank"
-            rel="noreferrer"
-            className="project-card-link project-card-link-primary"
-            aria-label={`${title} source on GitHub`}
-          >
-            <BsGithub aria-hidden="true" />
-            <span>GitHub</span>
-          </a>
-          {hasDemo && (
+        {(hasGithub || hasDemo) && (
+          <div className="project-card-actions">
+            {hasGithub && (
+              <a
+                href={ghLink}
+                target="_blank"
+                rel="noreferrer"
+                className="project-card-link project-card-link-primary"
+                aria-label={`${title} source on GitHub`}
+              >
+                <BsGithub aria-hidden="true" />
+                <span>GitHub</span>
+              </a>
+            )}
+            {hasDemo && (
             <a
               href={demoLink}
               target="_blank"
@@ -44,8 +48,9 @@ function ProjectCards({ title, description, imgPath, ghLink, demoLink, tags = []
               <CgWebsite aria-hidden="true" />
               <span>Live demo</span>
             </a>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </div>
     </article>
   );
