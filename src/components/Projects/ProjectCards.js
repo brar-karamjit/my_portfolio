@@ -10,9 +10,11 @@ function ProjectCards({ title, description, imgPath, ghLink, demoLink, tags = []
 
   return (
     <article className="project-card">
-      <div className="project-card-media">
-        <img src={imgPath} alt={`${title} preview`} loading="lazy" />
-      </div>
+      {imgPath && (
+        <div className="project-card-media">
+          <img src={imgPath} alt={`${title} preview`} loading="lazy" />
+        </div>
+      )}
       <div className="project-card-content">
         <h3 className="project-card-title">{title}</h3>
         <p className="project-card-description">{description}</p>

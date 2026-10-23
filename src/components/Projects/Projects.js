@@ -10,29 +10,28 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "MomentInMotion",
+    title: "Kubernetes GitOps Platform",
     description:
-      "Personalized activity recommendations to enhance daily experiences, using location, weather, and generative AI to recommend activities.",
-    imgPath: momentImg,
-    ghLink: "https://github.com/brar-karamjit/MomentInMotion",
-    demoLink: "https://momo.karamjitbrar.com/",
-    tags: ["Django", "AI", "Gemini", "Kubernetes"],
-  },
-  {
-    title: "Kubernetes Lab",
-    description:
-      "Kubernetes cluster deployed on Oracle Cloud Infrastructure (OCI). Features a CI/CD pipeline using GitHub Actions and Argo CD.",
+      "Three-node k3s cluster on Oracle Cloud, provisioned with Terraform and operated entirely through GitOps. Argo CD syncs the platform stack — Istio, cert-manager, External Secrets, Prometheus and Grafana — and the applications it hosts, including MomentInMotion below.",
     imgPath: kubernetesGif,
     ghLink: "https://github.com/brar-karamjit/devops_tools",
     demoLink: "https://k8s.karamjitbrar.com/",
-    tags: ["Kubernetes", "OCI", "CI/CD", "Prometheus"],
+    tags: ["Kubernetes", "Terraform", "Argo CD", "Istio", "Prometheus"],
   },
   {
     title: "AI-Powered ChatOps Agent",
     description:
       "An AI-driven Slack agent built with LangChain to troubleshoot failed Jenkins builds, create GitLab infrastructure merge requests, and streamline Jira workflows.",
-    imgPath: momentImg,
     tags: ["LangChain", "Slack", "Jenkins", "GitLab", "Jira"],
+  },
+  {
+    title: "MomentInMotion",
+    description:
+      "Django application hosted on my own Kubernetes platform and delivered through Argo CD GitOps. Uses location, weather, and generative AI to recommend activities and break decision fatigue.",
+    imgPath: momentImg,
+    ghLink: "https://github.com/brar-karamjit/moment_in_motion",
+    demoLink: "https://momo.karamjitbrar.com/",
+    tags: ["Django", "Kubernetes", "Argo CD", "Gemini"],
   },
 ];
 

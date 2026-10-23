@@ -2,34 +2,35 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
-import { FaServer, FaRobot, FaCubes } from "react-icons/fa";
+import { FaRobot, FaCubes, FaBolt } from "react-icons/fa";
 import "./Home.css";
 
 const featured = [
   {
-    title: "Infrastructure Provisioning Automation",
-    icon: <FaServer />,
+    title: "Kubernetes GitOps Platform",
+    icon: <FaCubes />,
     description:
-      "Repeatable, self-service provisioning of cloud and on-premises infrastructure using code instead of tickets and manual steps.",
-    tags: ["Terraform", "Ansible", "SaltStack", "Jenkins"],
+      "Three-node k3s cluster on Oracle Cloud, provisioned with Terraform and operated entirely through GitOps. Argo CD syncs the platform stack — Istio, cert-manager, External Secrets, Prometheus and Grafana — and the applications it hosts, including MomentInMotion below.",
+    tags: ["Kubernetes", "Terraform", "Argo CD", "Istio", "Prometheus"],
     to: "/project",
+    ghLink: "https://github.com/brar-karamjit/devops_tools",
   },
   {
     title: "AI-Powered ChatOps Agent",
     icon: <FaRobot />,
     description:
-      "An AI assistant that helps teams troubleshoot incidents and run operational workflows straight from chat.",
-    tags: ["Python", "LLM", "Runbooks", "Automation"],
+      "An AI-driven Slack agent built with LangChain to troubleshoot failed Jenkins builds, create GitLab infrastructure merge requests, and streamline Jira workflows.",
+    tags: ["LangChain", "Slack", "Jenkins", "GitLab", "Jira"],
     to: "/project",
   },
   {
-    title: "Kubernetes GitOps Homelab",
-    icon: <FaCubes />,
+    title: "MomentInMotion",
+    icon: <FaBolt />,
     description:
-      "A Kubernetes cluster on Oracle Cloud delivered through GitHub Actions and Argo CD, with Istio, cert-manager, and Prometheus.",
-    tags: ["Kubernetes", "Argo CD", "Istio", "Prometheus"],
+      "Django application hosted on my own Kubernetes platform and delivered through Argo CD GitOps. Uses location, weather, and generative AI to recommend activities and break decision fatigue.",
+    tags: ["Django", "Kubernetes", "Argo CD", "Gemini"],
     to: "/project",
-    ghLink: "https://github.com/brar-karamjit/devops_tools",
+    ghLink: "https://github.com/brar-karamjit/moment_in_motion",
   },
 ];
 
