@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import ProjectCard from "./ProjectCards";
 import momentImg from "../../Assets/Projects/AI-assistant.png";
 import kubernetesGif from "../../Assets/Projects/kubenetes.gif";
+import chatopsImg from "../../Assets/Projects/chatops.webp";
 
 import "../Home/Home.css";
 import "./Projects.css";
@@ -22,6 +23,7 @@ const projects = [
     title: "AI-Powered ChatOps Agent",
     description:
       "An AI-driven Slack agent built with LangChain to troubleshoot failed Jenkins builds, create GitLab infrastructure merge requests, and streamline Jira workflows.",
+    imgPath: chatopsImg,
     tags: ["LangChain", "Slack", "Jenkins", "GitLab", "Jira"],
   },
   {
