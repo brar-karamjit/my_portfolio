@@ -81,5 +81,4 @@ src/
 - Deploy stage: uploads the production `build/` directory as a Pages artifact and publishes it with `actions/deploy-pages`.
 - Troubleshooting: open the latest run in the **Actions** tab to inspect build output or rerun a failed job.
 
-## License
-MIT
+
